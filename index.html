@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conforti Assicurazioni | Consulenza & Intermediazione Assicurativa</title>
-    <meta name="description" content="Rocco Conforti, Agente RUI Sez. A. Soluzioni assicurative personalizzate per veicoli, persone, patrimonio e imprese a Noci e Putignano.">
+    <title>Conforti Assicurazioni | Agente Monomandatario Bene Assicurazioni</title>
+    <meta name="description" content="Rocco Conforti, Agente Monomandatario Bene Assicurazioni S.p.A. Società Benefit. Iscritto RUI Sezione A (A000099409). Sedi a Noci e Putignano.">
 
-    <!-- Start CookieYes banner (Sostituisci TUO_NUOVO_ID con la chiave generata) -->
+    <!-- CookieYes Banner -->
     <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/TUO_NUOVO_ID/script.js"></script>
-    <!-- End CookieYes banner -->
 
     <!-- FontAwesome 6.4 (Icone semantiche con aria-hidden) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,7 +15,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-        /* --- DESIGN TOKENS SISTEMICI (COLOR.SPACE.001, SPACE.SCALE.001) --- */
+        /* --- TOKENS SISTEMICI --- */
         :root {
             --brand-primary: #0a2540;
             --brand-primary-hover: #123456;
@@ -37,21 +36,14 @@
             --border-subtle: #e2e8f0;
             --border-strong: #cbd5e1;
 
-            --state-success: #059669;
-            --state-success-bg: #ecfdf5;
-            --state-destructive: #dc2626;
-
             --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
             
             --shadow-contact: 0 1px 2px 0 rgba(10, 37, 64, 0.04);
             --shadow-ambient: 0 8px 24px -4px rgba(10, 37, 64, 0.06);
             --shadow-hover: 0 12px 32px -4px rgba(10, 37, 64, 0.10);
         }
 
-        /* --- RESET E BASI TIPOGRAFICHE ACCESSIBILI --- */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -73,9 +65,9 @@
             min-height: 100dvh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
 
-        /* Accessibilità Focus-Visible Globale (A11Y.KEYBOARD.001) */
         :focus:not(:focus-visible) {
             outline: none;
         }
@@ -103,7 +95,7 @@
             max-width: 65ch;
         }
 
-        /* --- HEADER & NAVIGAZIONE STRUTTURATA --- */
+        /* --- HEADER --- */
         header {
             background-color: rgba(255, 255, 255, 0.98);
             border-bottom: 1px solid var(--border-subtle);
@@ -140,12 +132,11 @@
         }
 
         .logo-sub {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--text-muted);
-            padding-left: 1px;
         }
 
         nav ul {
@@ -188,7 +179,7 @@
             border-color: var(--brand-primary);
         }
 
-        /* --- BOTTONI E AFFORDANCE (COMP.BUTTON.001) --- */
+        /* --- BOTTONI --- */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -271,7 +262,7 @@
         }
 
         .hero h1 {
-            font-size: 2.75rem;
+            font-size: 2.65rem;
             line-height: 1.15;
             letter-spacing: -0.025em;
             color: var(--brand-primary);
@@ -343,17 +334,13 @@
             font-weight: 600;
         }
 
-        /* --- SEZIONI E STRUTTURA --- */
+        /* --- SEZIONI --- */
         section {
             padding: 88px 0;
         }
 
         .section-header {
             margin-bottom: 48px;
-        }
-
-        .section-header.center {
-            text-align: center;
         }
 
         .section-header h2 {
@@ -370,7 +357,7 @@
             font-size: 1rem;
         }
 
-        /* --- BENTO GRID ASIMMETRICA (ANTI.LAYOUT.001) --- */
+        /* --- BENTO GRID ASIMMETRICA --- */
         .bento-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -458,7 +445,7 @@
             margin-top: 20px;
         }
 
-        /* --- SEZIONE CHI SONO (PROFILO & COMPAGNIE) --- */
+        /* --- SEZIONE CHI SONO --- */
         #chi-sono {
             background-color: var(--surface-base);
             border-top: 1px solid var(--border-subtle);
@@ -470,10 +457,6 @@
             grid-template-columns: 320px 1fr;
             gap: 64px;
             align-items: start;
-        }
-
-        .about-photo-wrapper {
-            position: relative;
         }
 
         .about-photo {
@@ -508,12 +491,10 @@
 
         .mandate-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
             font-size: 0.8125rem;
             font-weight: 600;
             color: var(--brand-primary);
+            line-height: 1.5;
         }
 
         .about-content h3 {
@@ -538,7 +519,7 @@
             font-size: 0.9375rem;
         }
 
-        /* --- SEZIONE TROVA LE SEDI (MAPS & SEDI) --- */
+        /* --- TROVA LE SEDI --- */
         .locations-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -621,21 +602,21 @@
             color: var(--brand-accent);
         }
 
-        /* Info Window Google Maps */
+        /* Info Window Maps */
         .map-info-window {
-            padding: 12px;
+            padding: 10px;
             font-family: var(--font-sans);
             color: var(--text-primary);
         }
         .map-info-window h4 {
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             color: var(--brand-primary);
             margin-bottom: 4px;
         }
         .map-info-window p {
-            font-size: 0.8125rem;
+            font-size: 0.75rem;
             color: var(--text-secondary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         .map-info-window a {
             color: var(--brand-accent);
@@ -644,7 +625,7 @@
             text-decoration: none;
         }
 
-        /* --- SEZIONE CONTATTI & RECLAMI (COMP.INPUT.001) --- */
+        /* --- CONTATTI & RECLAMI --- */
         #contatti {
             background-color: var(--surface-base);
             border-top: 1px solid var(--border-subtle);
@@ -676,7 +657,6 @@
             margin-bottom: 16px;
         }
 
-        /* Relational Proximity Law: S_int (4px) vs S_ext (16px) */
         .form-group label {
             font-size: 0.8125rem;
             font-weight: 600;
@@ -684,7 +664,6 @@
             margin-bottom: 6px;
         }
 
-        /* Mobile Font Guard: min 16px su mobile per impedire l'auto-zoom su iOS Safari */
         .form-control {
             width: 100%;
             padding: 10px 14px;
@@ -756,7 +735,7 @@
             margin-bottom: 16px;
         }
 
-        /* --- FOOTER ISTITUZIONALE UNIFORMATO --- */
+        /* --- FOOTER --- */
         footer {
             background-color: var(--brand-primary);
             color: #cbd5e1;
@@ -806,11 +785,11 @@
             line-height: 1.6;
         }
 
-        /* --- MODALE IVASS ACCESSIBILE (COMP.MODAL.001) --- */
+        /* --- MODALE IVASS (ZERO OVERFLOW ORIZZONTALE MOBILE) --- */
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background-color: rgba(10, 37, 64, 0.6);
+            background-color: rgba(10, 37, 64, 0.65);
             backdrop-filter: blur(4px);
             display: flex;
             align-items: center;
@@ -818,6 +797,9 @@
             z-index: 1000;
             opacity: 0;
             visibility: hidden;
+            padding: 16px;
+            overflow-x: hidden;
+            overflow-y: hidden;
             transition: opacity 150ms var(--ease-out-expo), visibility 150ms;
         }
 
@@ -837,6 +819,7 @@
             flex-direction: column;
             box-shadow: 0 20px 48px -8px rgba(10, 37, 64, 0.25);
             transform: scale(0.96);
+            overflow-x: hidden;
             transition: transform 180ms var(--ease-out-expo);
         }
 
@@ -848,12 +831,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 24px;
+            padding: 18px 20px;
             border-bottom: 1px solid var(--border-subtle);
+            flex-shrink: 0;
         }
 
         .modal-header h3 {
-            font-size: 1.125rem;
+            font-size: 1.05rem;
             color: var(--brand-primary);
         }
 
@@ -876,21 +860,24 @@
         }
 
         .modal-body {
-            padding: 24px;
+            padding: 20px;
             overflow-y: auto;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         .data-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.8125rem;
-            margin-top: 12px;
+            margin-top: 10px;
         }
 
         .data-table th, .data-table td {
-            padding: 10px 14px;
+            padding: 9px 12px;
             text-align: left;
             border-bottom: 1px solid var(--border-subtle);
+            word-break: break-word;
         }
 
         .data-table th {
@@ -899,7 +886,46 @@
             font-weight: 600;
         }
 
-        /* --- PREFERS-REDUCED-MOTION (CONST.CORE.005) --- */
+        /* TRASFORMAZIONE TABELLA COLLABORATORI IN CARD SU SMARTPHONE PER ELIMINARE OVERFLOW ORIZZONTALE */
+        @media (max-width: 640px) {
+            .responsive-collab-table thead {
+                display: none;
+            }
+            .responsive-collab-table, 
+            .responsive-collab-table tbody, 
+            .responsive-collab-table tr, 
+            .responsive-collab-table td {
+                display: block;
+                width: 100%;
+            }
+            .responsive-collab-table tr {
+                background-color: var(--surface-ground);
+                border: 1px solid var(--border-subtle);
+                border-radius: 8px;
+                padding: 12px;
+                margin-bottom: 12px;
+            }
+            .responsive-collab-table td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 6px 0;
+                border-bottom: 1px dashed var(--border-subtle);
+                font-size: 0.8125rem;
+            }
+            .responsive-collab-table td:last-child {
+                border-bottom: none;
+            }
+            .responsive-collab-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: var(--text-muted);
+                margin-right: 12px;
+                flex-shrink: 0;
+            }
+        }
+
+        /* --- PREFERS-REDUCED-MOTION --- */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 animation-duration: 0.01ms !important;
@@ -909,7 +935,7 @@
             }
         }
 
-        /* --- RESPONSIVE & MOBILE (SPACE.VIEWPORT.001, A11Y.TARGET.001) --- */
+        /* --- RESPONSIVE GENERALE --- */
         @media (max-width: 992px) {
             .hero-layout, .about-grid, .contact-layout, .locations-grid {
                 grid-template-columns: 1fr;
@@ -921,7 +947,7 @@
                 grid-template-columns: 1fr;
             }
             nav {
-                display: none; /* Ingressi primari riservati al flusso lineare */
+                display: none;
             }
         }
     </style>
@@ -932,7 +958,7 @@
         <div class="container header-inner">
             <a href="#hero" class="logo" aria-label="Conforti Assicurazioni - Torna alla Homepage">
                 <span class="logo-main">conforti<span>.</span></span>
-                <span class="logo-sub">assicurazioni</span>
+                <span class="logo-sub">bene assicurazioni</span>
             </a>
             <nav aria-label="Navigazione principale">
                 <ul>
@@ -955,16 +981,16 @@
             <div class="container hero-layout">
                 <div>
                     <div class="hero-badge">
-                        <i class="fa-solid fa-shield-check" aria-hidden="true"></i>
-                        <span>Intermediario Iscritto al RUI Sezione A (IVASS)</span>
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <span>Agente Monomandatario Bene Assicurazioni S.p.A.</span>
                     </div>
-                    <h1>Protezione trasparente per la tua famiglia e la tua impresa.</h1>
+                    <h1>Protezione trasparente con la prima Società Benefit del settore.</h1>
                     <p class="prose-measure">
-                        Dal 2007 affianco famiglie, professionisti e aziende sul territorio con un approccio indipendente e rigoroso. Consulenza chiara, aderenza normativa e gestione diretta di ogni sinistro.
+                        Da oltre <strong class="dynamic-exp-years tabular">18</strong> anni metto la mia esperienza al servizio del territorio. In qualità di Agente Monomandatario per <strong>Bene Assicurazioni</strong>, offro soluzioni all'avanguardia pensate per generare valore reale per persone, famiglie e imprese.
                     </p>
                     <div class="hero-actions">
-                        <a href="#contatti" class="btn btn-primary">Richiedi un Preventivo Senza Impegno</a>
-                        <a href="#chi-sono" class="btn btn-secondary">Consulta Dati di Iscrizione</a>
+                        <a href="#contatti" class="btn btn-primary">Richiedi un Preventivo Gratuito</a>
+                        <a href="#chi-sono" class="btn btn-secondary">Consulta Iscrizione IVASS</a>
                     </div>
                 </div>
                 
@@ -973,7 +999,7 @@
                         <div class="hero-avatar" role="img" aria-label="Rocco Conforti"></div>
                         <div>
                             <strong style="display:block; font-size: 0.9375rem;">Rocco Conforti</strong>
-                            <span style="font-size: 0.8125rem; color: var(--text-muted);">Agente Generale di Assicurazioni</span>
+                            <span style="font-size: 0.8125rem; color: var(--text-muted);">Agente Monomandatario</span>
                         </div>
                     </div>
                     <div class="hero-meta-grid">
@@ -986,11 +1012,11 @@
                             <strong class="tabular">11/05/2007</strong>
                         </div>
                         <div class="meta-item">
-                            <span>Mandati Diretti</span>
-                            <strong>Allianz Next / Bene</strong>
+                            <span>Mandato Esclusivo</span>
+                            <strong>Bene Assicurazioni S.p.A.</strong>
                         </div>
                         <div class="meta-item">
-                            <span>Presidi Territoriali</span>
+                            <span>Sedi Territoriali</span>
                             <strong>Noci & Putignano</strong>
                         </div>
                     </div>
@@ -1002,98 +1028,100 @@
         <section id="polizze">
             <div class="container">
                 <div class="section-header">
-                    <h2>Soluzioni Assicurative</h2>
-                    <p class="prose-measure">Coperture calibrate sui reali fattori di rischio, senza costi superflui o ambiguità contrattuali.</p>
+                    <h2>Soluzioni Assicurative Bene</h2>
+                    <p class="prose-measure">Un catalogo prodotti integrato e modulare, studiato per offrirti massima chiarezza e tariffe personalizzate.</p>
                 </div>
 
                 <div class="bento-grid">
-                    <!-- CARD PRIMARIA / HERO: VEICOLI (Punto cardine con link a pagina dedicata) -->
+                    <!-- CARD PRIMARIA: VEICOLI -->
                     <a href="veicoli.html" class="bento-card bento-featured">
                         <div class="card-top">
                             <div class="card-icon-box">
                                 <i class="fa-solid fa-car-side" aria-hidden="true"></i>
                             </div>
-                            <h3>Mobilità & Veicoli</h3>
+                            <h3>Mobilità & Veicoli (Autofit)</h3>
                             <p class="prose-measure">
-                                Copertura obbligatoria RC e tutele accessorie complete per autovetture, motocicli, van e autocarri aziendali. Include Assistenza Stradale H24, Kasko integrale, tutela legale e protezione eventi naturali.
+                                Protezione completa per autovetture, motoveicoli, van e autocarri aziendali. Copertura RC, Kasko, Cristalli, Eventi Naturali e Assistenza Stradale H24 con gestione telematica e rapida dei sinistri.
                             </p>
                         </div>
                         <div class="card-footer-action">
-                            <span>Configura polizza veicoli e consulta i Set Informativi</span>
+                            <span>Scopri la polizza veicoli e consulta i Set Informativi</span>
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </div>
                     </a>
 
-                    <!-- CARD SECONDARIA: CASA E PATRIMONIO -->
+                    <!-- CARD SECONDARIA: CASA -->
                     <div class="bento-card bento-standard">
                         <div class="card-top">
                             <div class="card-icon-box">
                                 <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
                             </div>
-                            <h3>Casa & Fabbricati</h3>
-                            <p>Protezione del patrimonio immobiliare contro incendi, eventi atmosferici, danni d'acqua, furto e Responsabilità Civile della proprietà e della famiglia.</p>
+                            <h3>Casa & Famiglia</h3>
+                            <p>Tutele personalizzabili per la tua abitazione contro incendi, alluvioni, furti e responsabilità civile verso terzi per tutta la famiglia.</p>
                         </div>
-                        <span class="card-footer-action" style="color: var(--text-muted);">Consulenza in agenzia</span>
+                        <span class="card-footer-action" style="color: var(--text-muted);">Consulenza dedicata in agenzia</span>
                     </div>
 
-                    <!-- CARD TERZIARIA 1: VITA E SALUTE -->
+                    <!-- CARD TERZIARIA: SALUTE -->
                     <div class="bento-card bento-third">
                         <div class="card-top">
                             <div class="card-icon-box">
                                 <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
                             </div>
-                            <h3>Salute & Continuità Familiare</h3>
-                            <p>Piani di rimborso spese mediche, indennità da ricovero e coperture temporanee caso morte (TCM) a salvaguardia del tenore di vita familiare.</p>
+                            <h3>Salute & Infortuni</h3>
+                            <p>Indennità giornaliere, rimborso delle spese sanitarie e tutele dedicate per garantire continuità e serenità economica ai tuoi cari.</p>
                         </div>
                     </div>
 
-                    <!-- CARD TERZIARIA 2: COMMERCIO E PROFESSIONI -->
+                    <!-- CARD TERZIARIA: PROFESSIONE -->
                     <div class="bento-card bento-third">
                         <div class="card-top">
                             <div class="card-icon-box">
                                 <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                             </div>
-                            <h3>Responsabilità Professionale</h3>
-                            <p>Polizze RC Professionale obbligatorie per legge, tutele D&O per amministratori e protezione contro i rischi informatici d'impresa (Cyber Risk).</p>
+                            <h3>Professione & Impresa</h3>
+                            <p>Polizze di Responsabilità Civile Professionale obbligatoria, tutela del patrimonio aziendale, D&O e protezione Cyber Risk.</p>
                         </div>
                     </div>
 
-                    <!-- CARD TERZIARIA 3: FIDEIUSSIONI E CAUZIONI -->
+                    <!-- CARD TERZIARIA: CAUZIONI -->
                     <div class="bento-card bento-third">
                         <div class="card-top">
                             <div class="card-icon-box">
                                 <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
                             </div>
                             <h3>Cauzioni & Credito</h3>
-                            <p>Cauzioni per appalti pubblici, convenzioni urbanistiche, rimborsi IVA e fideiussioni contrattuali tra imprese a rilascio tempestivo.</p>
+                            <p>Fideiussioni veloci per appalti pubblici, convenzioni urbanistiche, bandi di gara e adempimenti contrattuali fra imprese.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEZIONE INTERMEDIARIO (CHI SONO) -->
+        <!-- SEZIONE CHI SONO -->
         <section id="chi-sono">
             <div class="container about-grid">
-                <div class="about-photo-wrapper">
+                <div>
                     <div class="about-photo" role="img" aria-label="Rocco Conforti"></div>
                     <div class="mandate-box">
-                        <span class="mandate-title">Compagnie Rappresentate</span>
-                        <ul class="mandate-list">
-                            <li>• ALLIANZ NEXT S.P.A.</li>
-                            <li>• BENE ASSICURAZIONI S.P.A. (Soc. Benefit)</li>
-                        </ul>
+                        <span class="mandate-title">Rappresentanza Esclusiva</span>
+                        <div class="mandate-list">
+                            <strong>BENE ASSICURAZIONI S.P.A. SOCIETÀ BENEFIT</strong>
+                            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; font-weight: normal;">
+                                Compagnia innovativa che unisce eccellenza tecnologica e impegno sociale nel rispetto dei principi di trasparenza e beneficio comune.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="about-content">
                     <h3>Rocco Conforti</h3>
-                    <span class="about-qualification">Agente Professionista iscritto al RUI, Sezione A — Matr. A000099409</span>
+                    <span class="about-qualification">Agente Monomandatario iscritto al RUI, Sez. A — Matr. A000099409</span>
                     <p class="prose-measure">
-                        Opero sul territorio pugliese da oltre 18 anni con un'etica professionale fondata sulla trasparenza precontrattuale e sulla presenza continuativa nel momento del sinistro. L'intermediazione assicurativa è prima di tutto un patto di fiducia.
+                        Opero sul territorio pugliese da oltre <strong class="dynamic-exp-years tabular">18</strong> anni con dedizione, trasparenza e una presenza costante al fianco dell'assicurato, specialmente nel momento fondamentale della gestione dei sinistri.
                     </p>
                     <p class="prose-measure">
-                        Attraverso le sedi operative di Noci e Putignano garantisco un servizio strutturato che unisce la solidità dei primari gruppi assicurativi nazionali (Allianz e Bene Assicurazioni) all'assistenza puntuale e diretta di un consulente dedicato.
+                        La scelta di operare come monomandatario di <strong>Bene Assicurazioni</strong> mi consente di offrire prodotti chiari, snelli e competitivi, supportati da una moderna infrastruttura digitale e dalla sicurezza del contatto umano garantito dalle mie due agenzie di Noci e Putignano.
                     </p>
                     <div style="margin-top: 24px;">
                         <button type="button" id="btn-open-modal" class="btn btn-secondary">
@@ -1109,8 +1137,8 @@
         <section id="sedi">
             <div class="container">
                 <div class="section-header">
-                    <h2>Presidi Territoriali</h2>
-                    <p class="prose-measure">Due agenzie strutturate per accoglierti di persona o per gestire le tue pratiche da remoto.</p>
+                    <h2>Sedi Operative</h2>
+                    <p class="prose-measure">Due presidi territoriali a tua disposizione per consulenze personalizzate o supporto pratiche.</p>
                 </div>
 
                 <div class="locations-grid">
@@ -1121,7 +1149,7 @@
                     <div class="agencies-wrapper">
                         <!-- SEDE NOCI -->
                         <div class="agency-card">
-                            <h3>Sede Principale di Noci</h3>
+                            <h3>Agenzia di Noci</h3>
                             <span class="agency-holder">Agente Responsabile: Rocco Conforti</span>
                             <ul class="agency-details">
                                 <li>
@@ -1145,7 +1173,7 @@
 
                         <!-- SEDE PUTIGNANO -->
                         <div class="agency-card">
-                            <h3>Sede Operativa di Putignano</h3>
+                            <h3>Agenzia di Putignano</h3>
                             <span class="agency-holder">Responsabile: Vincenzo Montaruli</span>
                             <ul class="agency-details">
                                 <li>
@@ -1177,10 +1205,9 @@
                 <div class="contact-layout">
                     <!-- MODULO CONTATTI -->
                     <div class="contact-form-panel">
-                        <h2 style="font-size: 1.5rem; color: var(--brand-primary); margin-bottom: 8px;">Richiedi Consulenza</h2>
-                        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px;">Compila il modulo per ricevere un riscontro tecnico entro 24 ore lavorative.</p>
+                        <h2 style="font-size: 1.5rem; color: var(--brand-primary); margin-bottom: 8px;">Richiedi una Consulenza</h2>
+                        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px;">Compila i campi sottostanti per essere ricontattato entro 24 ore lavorative.</p>
                         
-                        <!-- Formspree Endpoint -->
                         <form action="https://formspree.io/f/TUO_NUOVO_ENDPOINT_FORMSPREE" method="POST" id="main-contact-form">
                             <div class="form-grid-double">
                                 <div class="form-group">
@@ -1205,14 +1232,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="messaggio">Specifiche della Richiesta *</label>
-                                <textarea id="messaggio" name="messaggio" rows="4" class="form-control" placeholder="Indicare la tipologia di copertura di interesse (es. polizza auto, casa, infortuni)..." required></textarea>
+                                <label for="messaggio">La tua Richiesta *</label>
+                                <textarea id="messaggio" name="messaggio" rows="4" class="form-control" placeholder="Indicare la soluzione di interesse (es. polizza auto, casa, infortuni, cauzioni)..." required></textarea>
                             </div>
 
                             <div class="privacy-box">
                                 <input type="checkbox" id="privacy-check" name="privacy-check" required>
                                 <label for="privacy-check">
-                                    Dichiaro di aver preso visione della <a href="privacy-policy.html" target="_blank">Privacy Policy</a> e acconsento al trattamento dei dati personali per l'evasione della presente richiesta.
+                                    Dichiaro di aver preso visione della <a href="privacy-policy.html" target="_blank">Privacy Policy</a> e acconsento al trattamento dei miei dati personali.
                                 </label>
                             </div>
 
@@ -1228,18 +1255,18 @@
                         </form>
                     </div>
 
-                    <!-- GESTIONE RECLAMI (INFORMAZIONI REGOLAMENTARI IVASS) -->
+                    <!-- GESTIONE RECLAMI -->
                     <div class="claims-box">
-                        <h3>Gestione Reclami & Tutele</h3>
+                        <h3>Gestione Reclami</h3>
                         <p>
-                            Eventuali reclami aventi ad oggetto la gestione del rapporto contrattuale o l'operato dell'Agente devono essere inoltrati per iscritto al Titolare <strong>Rocco Conforti</strong> tramite:
+                            Eventuali reclami aventi ad oggetto il rapporto contrattuale o l'operato dell'Agente devono essere inoltrati all'Agente <strong>Rocco Conforti</strong> tramite:
                         </p>
                         <p style="background: var(--surface-muted); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8125rem;">
                             Email: <a href="mailto:rocco.conf@libero.it" style="color: var(--brand-primary); font-weight: bold;">rocco.conf@libero.it</a><br>
                             PEC: <a href="mailto:confortirocco@pec.it" style="color: var(--brand-primary); font-weight: bold;">confortirocco@pec.it</a>
                         </p>
                         <p>
-                            Qualora l'esito del reclamo non sia ritenuto soddisfacente o in caso di assenza di riscontro entro il termine di <strong>45 giorni</strong>, il contraente ha facoltà di rivolgersi all'<strong>IVASS</strong> (Servizio Tutela del Consumatore, Via del Quirinale 21, 00187 Roma), allegando la documentazione relativa al reclamo trattato dall'intermediario.
+                            In caso di assenza di riscontro entro il termine di <strong>45 giorni</strong> o qualora non ti ritenga soddisfatto dell'esito, potrai rivolgerti direttamente all'<strong>IVASS</strong> (Servizio Tutela del Consumatore, Via del Quirinale 21, 00187 Roma), corredando l'esposto con la documentazione comprovante il reclamo inoltrato all'intermediario.
                         </p>
                     </div>
                 </div>
@@ -1254,24 +1281,25 @@
                 <div class="footer-col">
                     <h4>Identificativi Intermediario</h4>
                     <ul>
-                        <li><strong>Titolare:</strong> Rocco Conforti</li>
+                        <li><strong>Agente Monomandatario:</strong> Rocco Conforti</li>
                         <li><strong>Registro RUI:</strong> Sezione A — n. A000099409</li>
-                        <li><strong>Data Iscrizione:</strong> 11 Maggio 2007</li>
+                        <li><strong>Data Iscrizione:</strong> 11/05/2007</li>
                         <li><strong>Partita IVA:</strong> 02144310725</li>
                         <li><strong>Sede Legale:</strong> Via Sold. Raffaele Tinelli 14, 70015 Noci (BA)</li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Vigilanza & Recapiti</h4>
+                    <h4>Mandato & Recapiti</h4>
                     <ul>
-                        <li>Intermediario soggetto alla vigilanza dell'<strong>IVASS</strong>.</li>
+                        <li>Intermediario per <strong>Bene Assicurazioni S.p.A.</strong></li>
+                        <li>Soggetto alla vigilanza dell'<strong>IVASS</strong>.</li>
                         <li>Telefono: <a href="tel:+390804972013">080 497 2013</a></li>
                         <li>Email: <a href="mailto:rocco.conf@libero.it">rocco.conf@libero.it</a></li>
                         <li>PEC: <a href="mailto:confortirocco@pec.it">confortirocco@pec.it</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Conformità Legale</h4>
+                    <h4>Trasparenza & Informazioni</h4>
                     <ul>
                         <li><a href="privacy-policy.html">Informativa sulla Privacy (GDPR)</a></li>
                         <li><a href="cookie-policy.html">Gestione Cookie Policy</a></li>
@@ -1281,69 +1309,128 @@
             </div>
             <div class="footer-bottom">
                 <p>
-                    L’attività di intermediazione assicurativa è svolta in piena conformità al Regolamento IVASS n. 40/2018. Le informazioni contenute in questo sito hanno natura meramente illustrativa e promozionale: non costituiscono proposta contrattuale e non sostituiscono in alcun modo i Set Informativi precontrattuali obbligatori per legge, consegnati prima della sottoscrizione.
+                    L’attività di intermediazione assicurativa è svolta in conformità al Regolamento IVASS n. 40/2018. Le informazioni presenti su questo sito hanno scopo puramente illustrativo, non costituiscono proposta contrattuale e non sostituiscono i Set Informativi precontrattuali forniti prima della sottoscrizione di ogni polizza.
                 </p>
-                <p style="margin-top: 12px;">© 2026 Rocco Conforti. Tutti i diritti riservati.</p>
+                <p style="margin-top: 12px;">© <span id="current-year">2026</span> Rocco Conforti. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
 
-    <!-- MODALE IVASS ACCESSIBILE (COMP.MODAL.001) -->
+    <!-- POP-UP MODALE IVASS ACCESSIBILE (SENZA OVERFLOW ORIZZONTALE MOBILE) -->
     <div id="ivass-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-header">
-                <h3 id="modal-title">Dati Ufficiali Registro RUI — Sezione A</h3>
-                <button type="button" class="modal-close" id="btn-close-modal" aria-label="Chiudi finestra dei dati RUI">
+                <h3 id="modal-title">Dati Intermediario — RUI Sezione A</h3>
+                <button type="button" class="modal-close" id="btn-close-modal" aria-label="Chiudi finestra modale RUI">
                     <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-bottom: 8px;">Dati dell'Intermediario Titolare</h4>
+                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-bottom: 8px;">Dettaglio Registro Unico Intermediari</h4>
                 <table class="data-table">
                     <tbody>
                         <tr><td><strong>Nominativo</strong></td><td>CONFORTI ROCCO</td></tr>
                         <tr><td><strong>Numero Iscrizione RUI</strong></td><td class="tabular">A000099409</td></tr>
-                        <tr><td><strong>Data di Iscrizione</strong></td><td class="tabular">11/05/2007</td></tr>
-                        <tr><td><strong>Qualifica</strong></td><td>Intermediario a titolo individuale (Sez. A)</td></tr>
+                        <tr><td><strong>Sezione</strong></td><td>A - Agenti</td></tr>
+                        <tr><td><strong>Data Iscrizione</strong></td><td class="tabular">11/05/2007</td></tr>
+                        <tr><td><strong>Luogo e Data di Nascita</strong></td><td>NOCI (BA) — 14/03/1966</td></tr>
+                        <tr><td><strong>Tipologia Attività</strong></td><td>ASSICURATIVA</td></tr>
+                        <tr><td><strong>Operatività</strong></td><td>A titolo individuale / OPERATIVO (dal 05/11/2007)</td></tr>
                     </tbody>
                 </table>
 
-                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-top: 24px; margin-bottom: 8px;">Compagnie con Accordo di Distribuzione</h4>
+                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-top: 24px; margin-bottom: 8px;">Impresa per la quale è svolta l'attività</h4>
                 <table class="data-table">
                     <tbody>
-                        <tr><td>ALLIANZ NEXT S.P.A.</td><td>Impresa autorizzata in Italia</td></tr>
-                        <tr><td>BENE ASSICURAZIONI S.P.A. SOCIETÀ BENEFIT</td><td>Impresa autorizzata in Italia</td></tr>
+                        <tr>
+                            <td><strong>Impresa Rappresentata</strong></td>
+                            <td>BENE ASSICURAZIONI S.P.A. SOCIETÀ BENEFIT (Monomandatario)</td>
+                        </tr>
                     </tbody>
                 </table>
 
-                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-top: 24px; margin-bottom: 8px;">Collaboratori Registrati (Sezione E)</h4>
+                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-top: 24px; margin-bottom: 8px;">Sedi Operative Iscritte</h4>
                 <table class="data-table">
+                    <tbody>
+                        <tr><td><strong>Sede 1</strong></td><td>VIA SOLDATO RAFFAELE TINELLI 14 - 70015 NOCI (BA)</td></tr>
+                        <tr><td><strong>Sede 2</strong></td><td>VIA DERNA 39 - 70017 PUTIGNANO (BA)</td></tr>
+                    </tbody>
+                </table>
+
+                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-top: 24px; margin-bottom: 8px;">Lista Collaboratori (Iscritti in Sezione E)</h4>
+                
+                <!-- Tabella responsive: diventa card verticale su smartphone -->
+                <table class="data-table responsive-collab-table">
                     <thead>
                         <tr>
+                            <th>N. Iscrizione</th>
                             <th>Nominativo</th>
                             <th>Qualifica</th>
-                            <th>Data Inizio</th>
+                            <th>Iscrizione</th>
+                            <th>Inizio Collab.</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>GENTILE ANNA MARIA</td><td>Collaboratore dipendente/incaricato</td><td class="tabular">13/06/2022</td></tr>
-                        <tr><td>MONTARULI VINCENZO</td><td>Responsabile sede Putignano</td><td class="tabular">13/01/2020</td></tr>
-                        <tr><td>CONFORTI PIETRO</td><td>Collaboratore di agenzia</td><td class="tabular">18/09/2023</td></tr>
-                        <tr><td>RESTA ADELAIDE</td><td>Collaboratore di agenzia</td><td class="tabular">03/11/2023</td></tr>
+                        <tr>
+                            <td data-label="N. Iscrizione" class="tabular">E000071069</td>
+                            <td data-label="Nominativo"><strong>GENTILE ANNA MARIA</strong></td>
+                            <td data-label="Qualifica">Collaboratore di Intermediario</td>
+                            <td data-label="Data Iscrizione" class="tabular">12/02/2007</td>
+                            <td data-label="Inizio Collab." class="tabular">13/06/2022</td>
+                        </tr>
+                        <tr>
+                            <td data-label="N. Iscrizione" class="tabular">E000099411</td>
+                            <td data-label="Nominativo"><strong>MONTARULI VINCENZO</strong></td>
+                            <td data-label="Qualifica">Collaboratore di Intermediario</td>
+                            <td data-label="Data Iscrizione" class="tabular">30/03/2009</td>
+                            <td data-label="Inizio Collab." class="tabular">13/01/2020</td>
+                        </tr>
+                        <tr>
+                            <td data-label="N. Iscrizione" class="tabular">E000736115</td>
+                            <td data-label="Nominativo"><strong>CONFORTI PIETRO</strong></td>
+                            <td data-label="Qualifica">Collaboratore di Intermediario</td>
+                            <td data-label="Data Iscrizione" class="tabular">18/09/2023</td>
+                            <td data-label="Inizio Collab." class="tabular">18/09/2023</td>
+                        </tr>
+                        <tr>
+                            <td data-label="N. Iscrizione" class="tabular">E000739253</td>
+                            <td data-label="Nominativo"><strong>RESTA ADELAIDE</strong></td>
+                            <td data-label="Qualifica">Collaboratore di Intermediario</td>
+                            <td data-label="Data Iscrizione" class="tabular">03/11/2023</td>
+                            <td data-label="Inizio Collab." class="tabular">03/11/2023</td>
+                        </tr>
                     </tbody>
                 </table>
 
                 <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 20px; text-align: center;">
-                    Dati estratti e verificabili sul portale ufficiale del <a href="https://ruipubblico.ivass.it/rui-pubblica/ng/#/workspace/registro-unico-intermediari" target="_blank" rel="noopener noreferrer" style="color: var(--brand-accent);">Registro Unico degli Intermediari (IVASS)</a>.
+                    Dati ufficiali estratti e verificabili sul sito pubblico dell'<a href="https://ruipubblico.ivass.it/rui-pubblica/ng/#/workspace/registro-unico-intermediari" target="_blank" rel="noopener noreferrer" style="color: var(--brand-accent);">IVASS — Registro Unico Intermediari</a>.
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- LOGICA INTERATTIVA ACCESSIBILE -->
+    <!-- LOGICA SCRIPT: ANNI DINAMICI & GESTIONE POP-UP -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Gestione Modale Accessibile (Focus Trap, Escape & Scroll Locking)
+            // 1. Calcolo Dinamico Anni di Attività da Iscrizione RUI (11 Maggio 2007)
+            const registrationDate = new Date(2007, 4, 11); // Maggio ha indice mese 4
+            const today = new Date();
+            let yearsDiff = today.getFullYear() - registrationDate.getFullYear();
+            const monthDiff = today.getMonth() - registrationDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < registrationDate.getDate())) {
+                yearsDiff--;
+            }
+
+            document.querySelectorAll('.dynamic-exp-years').forEach(span => {
+                span.textContent = yearsDiff;
+            });
+
+            // Anno dinamico footer
+            const yearFooter = document.getElementById('current-year');
+            if (yearFooter) yearFooter.textContent = today.getFullYear();
+
+            // 2. Gestione Modale Accessibile (Focus Trap, Escape & Scroll Locking)
             const modal = document.getElementById('ivass-modal');
             const openBtn = document.getElementById('btn-open-modal');
             const closeBtn = document.getElementById('btn-close-modal');
@@ -1377,7 +1464,7 @@
                 }
             });
 
-            // Gestione Submit Form (Prevenzione Double-Click & Latenza)
+            // 3. Prevenzione Double-Click Form
             const contactForm = document.getElementById('main-contact-form');
             const submitBtn = document.getElementById('btn-submit');
 
@@ -1389,7 +1476,7 @@
         });
     </script>
 
-    <!-- SCRIPT GOOGLE MAPS (Sostituisci TUO_NUOVO_API_KEY_GOOGLE con la tua chiave protetta) -->
+    <!-- GOOGLE MAPS API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=TUO_NUOVO_API_KEY_GOOGLE&callback=initMap" async defer></script>
     <script>
         function initMap() {
