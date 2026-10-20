@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conforti Assicurazioni | Consulenza & Intermediazione Assicurativa</title>
+    <meta name="description" content="Rocco Conforti, Agente RUI Sez. A. Soluzioni assicurative personalizzate per veicoli, persone, patrimonio e imprese a Noci e Putignano.">
+
+    <!-- Start CookieYes banner (Sostituisci TUO_NUOVO_ID con la chiave generata) -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/TUO_NUOVO_ID/script.js"></script>
+    <!-- End CookieYes banner -->
+
+    <!-- FontAwesome 6.4 (Icone semantiche con aria-hidden) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* --- DESIGN TOKENS SISTEMICI (COLOR.SPACE.001, SPACE.SCALE.001) --- */
+        :root {
+            --brand-primary: #0a2540;
+            --brand-primary-hover: #123456;
+            --brand-accent: #c20e6a;
+            --brand-accent-hover: #a30b59;
+            --brand-accent-subtle: #fdf2f7;
+            
+            --surface-ground: #f8fafc;
+            --surface-base: #ffffff;
+            --surface-muted: #f1f5f9;
+            --surface-overlay: #ffffff;
+
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-inverse: #ffffff;
+
+            --border-subtle: #e2e8f0;
+            --border-strong: #cbd5e1;
+
+            --state-success: #059669;
+            --state-success-bg: #ecfdf5;
+            --state-destructive: #dc2626;
+
+            --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+            
+            --shadow-contact: 0 1px 2px 0 rgba(10, 37, 64, 0.04);
+            --shadow-ambient: 0 8px 24px -4px rgba(10, 37, 64, 0.06);
+            --shadow-hover: 0 12px 32px -4px rgba(10, 37, 64, 0.10);
+        }
+
+        /* --- RESET E BASI TIPOGRAFICHE ACCESSIBILI --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 96px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--surface-ground);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Accessibilità Focus-Visible Globale (A11Y.KEYBOARD.001) */
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--brand-accent);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+            width: 100%;
+        }
+
+        .tabular {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .prose-measure {
+            max-width: 65ch;
+        }
+
+        /* --- HEADER & NAVIGAZIONE STRUTTURATA --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: inline-flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .logo-main {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--brand-primary);
+            line-height: 1.1;
+        }
+
+        .logo-main span {
+            color: var(--brand-accent);
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            padding-left: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 150ms var(--ease-out-expo);
+        }
+
+        nav a:hover {
+            color: var(--brand-primary);
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            background-color: var(--surface-muted);
+            color: var(--brand-primary);
+            border: 1px solid var(--border-subtle);
+            border-radius: 999px;
+            text-decoration: none;
+            transition: background-color 150ms var(--ease-out-expo), border-color 150ms var(--ease-out-expo);
+        }
+
+        .header-cta:hover {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        /* --- BOTTONI E AFFORDANCE (COMP.BUTTON.001) --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 44px;
+            padding: 10px 22px;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: background-color 150ms var(--ease-out-expo), transform 75ms var(--ease-out-expo), box-shadow 150ms var(--ease-out-expo);
+            user-select: none;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-accent);
+            color: var(--text-inverse);
+            box-shadow: var(--shadow-contact);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--surface-base);
+            color: var(--brand-primary);
+            border-color: var(--border-subtle);
+            box-shadow: var(--shadow-contact);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--surface-muted);
+            border-color: var(--border-strong);
+        }
+
+        .btn-whatsapp {
+            background-color: #128c7e;
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #075e54;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 72px 0 88px;
+            background-color: var(--surface-base);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background-color: var(--brand-accent-subtle);
+            color: var(--brand-accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(194, 14, 106, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: var(--brand-primary);
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.65;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta-card {
+            background-color: var(--surface-ground);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-contact);
+        }
+
+        .hero-meta-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 16px;
+        }
+
+        .hero-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--border-strong);
+            background-image: url('Profilo.jpg');
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            border: 2px solid var(--surface-base);
+            box-shadow: var(--shadow-contact);
+        }
+
+        .hero-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .meta-item span {
+            display: block;
+            font-size: 0.6875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .meta-item strong {
+            font-size: 0.8125rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* --- SEZIONI E STRUTTURA --- */
+        section {
+            padding: 88px 0;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-header.center {
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            color: var(--brand-primary);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* --- BENTO GRID ASIMMETRICA (ANTI.LAYOUT.001) --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .bento-card {
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--shadow-contact), var(--shadow-ambient);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            transition: border-color 150ms var(--ease-out-expo), box-shadow 150ms var(--ease-out-expo), transform 150ms var(--ease-out-expo);
+        }
+
+        .bento-card:hover {
+            border-color: var(--brand-primary);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .bento-featured {
+            grid-column: span 7;
+            background: linear-gradient(135deg, #ffffff 60%, var(--brand-accent-subtle) 100%);
+            border-color: rgba(194, 14, 106, 0.25);
+        }
+
+        .bento-standard {
+            grid-column: span 5;
+        }
+
+        .bento-third {
+            grid-column: span 4;
+        }
+
+        .card-top {
+            margin-bottom: 24px;
+        }
+
+        .card-icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background-color: var(--surface-muted);
+            color: var(--brand-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        .bento-featured .card-icon-box {
+            background-color: var(--brand-accent);
+            color: #ffffff;
+        }
+
+        .bento-card h3 {
+            font-size: 1.25rem;
+            color: var(--brand-primary);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .bento-card p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .card-footer-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--brand-accent);
+            margin-top: 20px;
+        }
+
+        /* --- SEZIONE CHI SONO (PROFILO & COMPAGNIE) --- */
+        #chi-sono {
+            background-color: var(--surface-base);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .about-photo-wrapper {
+            position: relative;
+        }
+
+        .about-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 12px;
+            background-color: var(--surface-muted);
+            background-image: url('Profilo.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-ambient);
+        }
+
+        .mandate-box {
+            margin-top: 24px;
+            padding: 20px;
+            background-color: var(--surface-ground);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+        }
+
+        .mandate-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .mandate-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--brand-primary);
+        }
+
+        .about-content h3 {
+            font-size: 1.75rem;
+            color: var(--brand-primary);
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            margin-bottom: 6px;
+        }
+
+        .about-qualification {
+            color: var(--brand-accent);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 0.9375rem;
+        }
+
+        /* --- SEZIONE TROVA LE SEDI (MAPS & SEDI) --- */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        #map-container {
+            height: 100%;
+            min-height: 480px;
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            box-shadow: var(--shadow-ambient);
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .agencies-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .agency-card {
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-contact);
+        }
+
+        .agency-card h3 {
+            font-size: 1.125rem;
+            color: var(--brand-primary);
+            margin-bottom: 4px;
+        }
+
+        .agency-holder {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--brand-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .agency-details {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .agency-details li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .agency-details i {
+            color: var(--brand-primary);
+            margin-top: 4px;
+            width: 16px;
+            text-align: center;
+        }
+
+        .agency-details a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .agency-details a:hover {
+            color: var(--brand-accent);
+        }
+
+        /* Info Window Google Maps */
+        .map-info-window {
+            padding: 12px;
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+        }
+        .map-info-window h4 {
+            font-size: 0.9375rem;
+            color: var(--brand-primary);
+            margin-bottom: 4px;
+        }
+        .map-info-window p {
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .map-info-window a {
+            color: var(--brand-accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* --- SEZIONE CONTATTI & RECLAMI (COMP.INPUT.001) --- */
+        #contatti {
+            background-color: var(--surface-base);
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+        }
+
+        .contact-form-panel {
+            background-color: var(--surface-ground);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--shadow-contact);
+        }
+
+        .form-grid-double {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        /* Relational Proximity Law: S_int (4px) vs S_ext (16px) */
+        .form-group label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        /* Mobile Font Guard: min 16px su mobile per impedire l'auto-zoom su iOS Safari */
+        .form-control {
+            width: 100%;
+            padding: 10px 14px;
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            transition: border-color 150ms var(--ease-out-expo), box-shadow 150ms var(--ease-out-expo);
+        }
+
+        @media (min-width: 768px) {
+            .form-control {
+                font-size: 0.875rem;
+            }
+        }
+
+        .form-control:focus-visible {
+            border-color: var(--brand-accent);
+            box-shadow: 0 0 0 3px rgba(194, 14, 106, 0.15);
+            outline: none;
+        }
+
+        .privacy-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .privacy-box input[type="checkbox"] {
+            margin-top: 4px;
+            width: 16px;
+            height: 16px;
+            accent-color: var(--brand-accent);
+        }
+
+        .privacy-box label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .privacy-box a {
+            color: var(--brand-primary);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .claims-box {
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--shadow-contact);
+        }
+
+        .claims-box h3 {
+            font-size: 1.25rem;
+            color: var(--brand-primary);
+            margin-bottom: 12px;
+        }
+
+        .claims-box p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+
+        /* --- FOOTER ISTITUZIONALE UNIFORMATO --- */
+        footer {
+            background-color: var(--brand-primary);
+            color: #cbd5e1;
+            padding: 64px 0 32px;
+            font-size: 0.8125rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 150ms var(--ease-out-expo);
+        }
+
+        .footer-col a:hover {
+            color: var(--brand-accent-subtle);
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* --- MODALE IVASS ACCESSIBILE (COMP.MODAL.001) --- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(10, 37, 64, 0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 150ms var(--ease-out-expo), visibility 150ms;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-dialog {
+            background-color: var(--surface-overlay);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 800px;
+            max-height: 90dvh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 48px -8px rgba(10, 37, 64, 0.25);
+            transform: scale(0.96);
+            transition: transform 180ms var(--ease-out-expo);
+        }
+
+        .modal-overlay.open .modal-dialog {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .modal-header h3 {
+            font-size: 1.125rem;
+            color: var(--brand-primary);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+        }
+
+        .modal-close:hover {
+            color: var(--text-primary);
+            background-color: var(--surface-muted);
+        }
+
+        .modal-body {
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8125rem;
+            margin-top: 12px;
+        }
+
+        .data-table th, .data-table td {
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .data-table th {
+            background-color: var(--surface-muted);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* --- PREFERS-REDUCED-MOTION (CONST.CORE.005) --- */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* --- RESPONSIVE & MOBILE (SPACE.VIEWPORT.001, A11Y.TARGET.001) --- */
+        @media (max-width: 992px) {
+            .hero-layout, .about-grid, .contact-layout, .locations-grid {
+                grid-template-columns: 1fr;
+            }
+            .bento-featured, .bento-standard, .bento-third {
+                grid-column: span 12;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                display: none; /* Ingressi primari riservati al flusso lineare */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#hero" class="logo" aria-label="Conforti Assicurazioni - Torna alla Homepage">
+                <span class="logo-main">conforti<span>.</span></span>
+                <span class="logo-sub">assicurazioni</span>
+            </a>
+            <nav aria-label="Navigazione principale">
+                <ul>
+                    <li><a href="#polizze">Soluzioni</a></li>
+                    <li><a href="#chi-sono">L'Intermediario</a></li>
+                    <li><a href="#sedi">Sedi</a></li>
+                    <li><a href="#contatti">Reclami & Assistenza</a></li>
+                </ul>
+            </nav>
+            <a href="#contatti" class="header-cta">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                <span>Consulenza Diretta</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="container hero-layout">
+                <div>
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-shield-check" aria-hidden="true"></i>
+                        <span>Intermediario Iscritto al RUI Sezione A (IVASS)</span>
+                    </div>
+                    <h1>Protezione trasparente per la tua famiglia e la tua impresa.</h1>
+                    <p class="prose-measure">
+                        Dal 2007 affianco famiglie, professionisti e aziende sul territorio con un approccio indipendente e rigoroso. Consulenza chiara, aderenza normativa e gestione diretta di ogni sinistro.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contatti" class="btn btn-primary">Richiedi un Preventivo Senza Impegno</a>
+                        <a href="#chi-sono" class="btn btn-secondary">Consulta Dati di Iscrizione</a>
+                    </div>
+                </div>
+                
+                <aside class="hero-meta-card" aria-label="Riepilogo agenzia">
+                    <div class="hero-meta-header">
+                        <div class="hero-avatar" role="img" aria-label="Rocco Conforti"></div>
+                        <div>
+                            <strong style="display:block; font-size: 0.9375rem;">Rocco Conforti</strong>
+                            <span style="font-size: 0.8125rem; color: var(--text-muted);">Agente Generale di Assicurazioni</span>
+                        </div>
+                    </div>
+                    <div class="hero-meta-grid">
+                        <div class="meta-item">
+                            <span>Numero RUI</span>
+                            <strong class="tabular">A000099409</strong>
+                        </div>
+                        <div class="meta-item">
+                            <span>Iscritto dal</span>
+                            <strong class="tabular">11/05/2007</strong>
+                        </div>
+                        <div class="meta-item">
+                            <span>Mandati Diretti</span>
+                            <strong>Allianz Next / Bene</strong>
+                        </div>
+                        <div class="meta-item">
+                            <span>Presidi Territoriali</span>
+                            <strong>Noci & Putignano</strong>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- SEZIONE SOLUZIONI (BENTO GRID ASIMMETRICA) -->
+        <section id="polizze">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Soluzioni Assicurative</h2>
+                    <p class="prose-measure">Coperture calibrate sui reali fattori di rischio, senza costi superflui o ambiguità contrattuali.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- CARD PRIMARIA / HERO: VEICOLI (Punto cardine con link a pagina dedicata) -->
+                    <a href="veicoli.html" class="bento-card bento-featured">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+                            </div>
+                            <h3>Mobilità & Veicoli</h3>
+                            <p class="prose-measure">
+                                Copertura obbligatoria RC e tutele accessorie complete per autovetture, motocicli, van e autocarri aziendali. Include Assistenza Stradale H24, Kasko integrale, tutela legale e protezione eventi naturali.
+                            </p>
+                        </div>
+                        <div class="card-footer-action">
+                            <span>Configura polizza veicoli e consulta i Set Informativi</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </div>
+                    </a>
+
+                    <!-- CARD SECONDARIA: CASA E PATRIMONIO -->
+                    <div class="bento-card bento-standard">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+                            </div>
+                            <h3>Casa & Fabbricati</h3>
+                            <p>Protezione del patrimonio immobiliare contro incendi, eventi atmosferici, danni d'acqua, furto e Responsabilità Civile della proprietà e della famiglia.</p>
+                        </div>
+                        <span class="card-footer-action" style="color: var(--text-muted);">Consulenza in agenzia</span>
+                    </div>
+
+                    <!-- CARD TERZIARIA 1: VITA E SALUTE -->
+                    <div class="bento-card bento-third">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                            </div>
+                            <h3>Salute & Continuità Familiare</h3>
+                            <p>Piani di rimborso spese mediche, indennità da ricovero e coperture temporanee caso morte (TCM) a salvaguardia del tenore di vita familiare.</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD TERZIARIA 2: COMMERCIO E PROFESSIONI -->
+                    <div class="bento-card bento-third">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                            </div>
+                            <h3>Responsabilità Professionale</h3>
+                            <p>Polizze RC Professionale obbligatorie per legge, tutele D&O per amministratori e protezione contro i rischi informatici d'impresa (Cyber Risk).</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD TERZIARIA 3: FIDEIUSSIONI E CAUZIONI -->
+                    <div class="bento-card bento-third">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+                            </div>
+                            <h3>Cauzioni & Credito</h3>
+                            <p>Cauzioni per appalti pubblici, convenzioni urbanistiche, rimborsi IVA e fideiussioni contrattuali tra imprese a rilascio tempestivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE INTERMEDIARIO (CHI SONO) -->
+        <section id="chi-sono">
+            <div class="container about-grid">
+                <div class="about-photo-wrapper">
+                    <div class="about-photo" role="img" aria-label="Rocco Conforti"></div>
+                    <div class="mandate-box">
+                        <span class="mandate-title">Compagnie Rappresentate</span>
+                        <ul class="mandate-list">
+                            <li>• ALLIANZ NEXT S.P.A.</li>
+                            <li>• BENE ASSICURAZIONI S.P.A. (Soc. Benefit)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <h3>Rocco Conforti</h3>
+                    <span class="about-qualification">Agente Professionista iscritto al RUI, Sezione A — Matr. A000099409</span>
+                    <p class="prose-measure">
+                        Opero sul territorio pugliese da oltre 18 anni con un'etica professionale fondata sulla trasparenza precontrattuale e sulla presenza continuativa nel momento del sinistro. L'intermediazione assicurativa è prima di tutto un patto di fiducia.
+                    </p>
+                    <p class="prose-measure">
+                        Attraverso le sedi operative di Noci e Putignano garantisco un servizio strutturato che unisce la solidità dei primari gruppi assicurativi nazionali (Allianz e Bene Assicurazioni) all'assistenza puntuale e diretta di un consulente dedicato.
+                    </p>
+                    <div style="margin-top: 24px;">
+                        <button type="button" id="btn-open-modal" class="btn btn-secondary">
+                            <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+                            <span>Visualizza Iscrizione e Collaboratori RUI</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE TROVA LE SEDI -->
+        <section id="sedi">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Presidi Territoriali</h2>
+                    <p class="prose-measure">Due agenzie strutturate per accoglierti di persona o per gestire le tue pratiche da remoto.</p>
+                </div>
+
+                <div class="locations-grid">
+                    <div id="map-container">
+                        <div id="map" role="region" aria-label="Mappa delle sedi di Noci e Putignano"></div>
+                    </div>
+
+                    <div class="agencies-wrapper">
+                        <!-- SEDE NOCI -->
+                        <div class="agency-card">
+                            <h3>Sede Principale di Noci</h3>
+                            <span class="agency-holder">Agente Responsabile: Rocco Conforti</span>
+                            <ul class="agency-details">
+                                <li>
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    <span>Via Sold. Raffaele Tinelli, 14 — 70015 Noci (BA)</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                    <span class="tabular"><a href="tel:+390804972013">080 497 2013</a></span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                                    <span class="tabular">Lun-Ven: 09:00-13:00 / 16:00-19:00 | Sab: 09:00-12:30</span>
+                                </li>
+                            </ul>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Soldato+Raffaele+Tinelli+14,+70015+Noci+BA" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+                                <span>Ottieni Indicazioni Stradali</span>
+                            </a>
+                        </div>
+
+                        <!-- SEDE PUTIGNANO -->
+                        <div class="agency-card">
+                            <h3>Sede Operativa di Putignano</h3>
+                            <span class="agency-holder">Responsabile: Vincenzo Montaruli</span>
+                            <ul class="agency-details">
+                                <li>
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    <span>Via Derna, 39 — 70017 Putignano (BA)</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                    <span class="tabular"><a href="tel:+390805247281">080 524 7281</a></span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                                    <span class="tabular">Lun-Ven: 09:00-13:00 / 16:30-19:30</span>
+                                </li>
+                            </ul>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Derna+39,+70017+Putignano+BA" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+                                <span>Ottieni Indicazioni Stradali</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE CONTATTI E RECLAMI -->
+        <section id="contatti">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- MODULO CONTATTI -->
+                    <div class="contact-form-panel">
+                        <h2 style="font-size: 1.5rem; color: var(--brand-primary); margin-bottom: 8px;">Richiedi Consulenza</h2>
+                        <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px;">Compila il modulo per ricevere un riscontro tecnico entro 24 ore lavorative.</p>
+                        
+                        <!-- Formspree Endpoint -->
+                        <form action="https://formspree.io/f/TUO_NUOVO_ENDPOINT_FORMSPREE" method="POST" id="main-contact-form">
+                            <div class="form-grid-double">
+                                <div class="form-group">
+                                    <label for="nome">Nome *</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="es. Mario" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cognome">Cognome *</label>
+                                    <input type="text" id="cognome" name="cognome" class="form-control" placeholder="es. Rossi" required>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-double">
+                                <div class="form-group">
+                                    <label for="email">Indirizzo Email *</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="nome@dominio.it" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Recapito Telefonico</label>
+                                    <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="340 0000000">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="messaggio">Specifiche della Richiesta *</label>
+                                <textarea id="messaggio" name="messaggio" rows="4" class="form-control" placeholder="Indicare la tipologia di copertura di interesse (es. polizza auto, casa, infortuni)..." required></textarea>
+                            </div>
+
+                            <div class="privacy-box">
+                                <input type="checkbox" id="privacy-check" name="privacy-check" required>
+                                <label for="privacy-check">
+                                    Dichiaro di aver preso visione della <a href="privacy-policy.html" target="_blank">Privacy Policy</a> e acconsento al trattamento dei dati personali per l'evasione della presente richiesta.
+                                </label>
+                            </div>
+
+                            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                                <button type="submit" class="btn btn-primary" id="btn-submit">
+                                    <span>Invia Richiesta</span>
+                                </button>
+                                <a href="https://wa.me/393479311461" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                                    <span>Scrivimi su WhatsApp</span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- GESTIONE RECLAMI (INFORMAZIONI REGOLAMENTARI IVASS) -->
+                    <div class="claims-box">
+                        <h3>Gestione Reclami & Tutele</h3>
+                        <p>
+                            Eventuali reclami aventi ad oggetto la gestione del rapporto contrattuale o l'operato dell'Agente devono essere inoltrati per iscritto al Titolare <strong>Rocco Conforti</strong> tramite:
+                        </p>
+                        <p style="background: var(--surface-muted); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.8125rem;">
+                            Email: <a href="mailto:rocco.conf@libero.it" style="color: var(--brand-primary); font-weight: bold;">rocco.conf@libero.it</a><br>
+                            PEC: <a href="mailto:confortirocco@pec.it" style="color: var(--brand-primary); font-weight: bold;">confortirocco@pec.it</a>
+                        </p>
+                        <p>
+                            Qualora l'esito del reclamo non sia ritenuto soddisfacente o in caso di assenza di riscontro entro il termine di <strong>45 giorni</strong>, il contraente ha facoltà di rivolgersi all'<strong>IVASS</strong> (Servizio Tutela del Consumatore, Via del Quirinale 21, 00187 Roma), allegando la documentazione relativa al reclamo trattato dall'intermediario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER ISTITUZIONALE -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Identificativi Intermediario</h4>
+                    <ul>
+                        <li><strong>Titolare:</strong> Rocco Conforti</li>
+                        <li><strong>Registro RUI:</strong> Sezione A — n. A000099409</li>
+                        <li><strong>Data Iscrizione:</strong> 11 Maggio 2007</li>
+                        <li><strong>Partita IVA:</strong> 02144310725</li>
+                        <li><strong>Sede Legale:</strong> Via Sold. Raffaele Tinelli 14, 70015 Noci (BA)</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Vigilanza & Recapiti</h4>
+                    <ul>
+                        <li>Intermediario soggetto alla vigilanza dell'<strong>IVASS</strong>.</li>
+                        <li>Telefono: <a href="tel:+390804972013">080 497 2013</a></li>
+                        <li>Email: <a href="mailto:rocco.conf@libero.it">rocco.conf@libero.it</a></li>
+                        <li>PEC: <a href="mailto:confortirocco@pec.it">confortirocco@pec.it</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Conformità Legale</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Informativa sulla Privacy (GDPR)</a></li>
+                        <li><a href="cookie-policy.html">Gestione Cookie Policy</a></li>
+                        <li><a href="#contatti">Procedura di Reclamo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    L’attività di intermediazione assicurativa è svolta in piena conformità al Regolamento IVASS n. 40/2018. Le informazioni contenute in questo sito hanno natura meramente illustrativa e promozionale: non costituiscono proposta contrattuale e non sostituiscono in alcun modo i Set Informativi precontrattuali obbligatori per legge, consegnati prima della sottoscrizione.
+                </p>
+                <p style="margin-top: 12px;">© 2026 Rocco Conforti. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALE IVASS ACCESSIBILE (COMP.MODAL.001) -->
+    <div id="ivass-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="modal-title">Dati Ufficiali Registro RUI — Sezione A</h3>
+                <button type="button" class="modal-close" id="btn-close-modal" aria-label="Chiudi finestra dei dati RUI">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-bottom: 8px;">Dati dell'Intermediario Titolare</h4>
+                <table class="data-table">
+                    <tbody>
+                        <tr><td><strong>Nominativo</strong></td><td>CONFORTI ROCCO</td></tr>
+                        <tr><td><strong>Numero Iscrizione RUI</strong></td><td class="tabular">A000099409</td></tr>
+                        <tr><td><strong>Data di Iscrizione</strong></td><td class="tabular">11/05/2007</td></tr>
+                        <tr><td><strong>Qualifica</strong></td><td>Intermediario a titolo individuale (Sez. A)</td></tr>
+                    </tbody>
+                </table>
+
+                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-top: 24px; margin-bottom: 8px;">Compagnie con Accordo di Distribuzione</h4>
+                <table class="data-table">
+                    <tbody>
+                        <tr><td>ALLIANZ NEXT S.P.A.</td><td>Impresa autorizzata in Italia</td></tr>
+                        <tr><td>BENE ASSICURAZIONI S.P.A. SOCIETÀ BENEFIT</td><td>Impresa autorizzata in Italia</td></tr>
+                    </tbody>
+                </table>
+
+                <h4 style="font-size: 0.875rem; color: var(--brand-primary); margin-top: 24px; margin-bottom: 8px;">Collaboratori Registrati (Sezione E)</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nominativo</th>
+                            <th>Qualifica</th>
+                            <th>Data Inizio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>GENTILE ANNA MARIA</td><td>Collaboratore dipendente/incaricato</td><td class="tabular">13/06/2022</td></tr>
+                        <tr><td>MONTARULI VINCENZO</td><td>Responsabile sede Putignano</td><td class="tabular">13/01/2020</td></tr>
+                        <tr><td>CONFORTI PIETRO</td><td>Collaboratore di agenzia</td><td class="tabular">18/09/2023</td></tr>
+                        <tr><td>RESTA ADELAIDE</td><td>Collaboratore di agenzia</td><td class="tabular">03/11/2023</td></tr>
+                    </tbody>
+                </table>
+
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 20px; text-align: center;">
+                    Dati estratti e verificabili sul portale ufficiale del <a href="https://ruipubblico.ivass.it/rui-pubblica/ng/#/workspace/registro-unico-intermediari" target="_blank" rel="noopener noreferrer" style="color: var(--brand-accent);">Registro Unico degli Intermediari (IVASS)</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGICA INTERATTIVA ACCESSIBILE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gestione Modale Accessibile (Focus Trap, Escape & Scroll Locking)
+            const modal = document.getElementById('ivass-modal');
+            const openBtn = document.getElementById('btn-open-modal');
+            const closeBtn = document.getElementById('btn-close-modal');
+            let previousActiveElement = null;
+
+            const openModal = () => {
+                previousActiveElement = document.activeElement;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                closeBtn.focus();
+            };
+
+            const closeModal = () => {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                if (previousActiveElement) previousActiveElement.focus();
+            };
+
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('open')) {
+                    closeModal();
+                }
+            });
+
+            // Gestione Submit Form (Prevenzione Double-Click & Latenza)
+            const contactForm = document.getElementById('main-contact-form');
+            const submitBtn = document.getElementById('btn-submit');
+
+            contactForm.addEventListener('submit', () => {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.6';
+                submitBtn.innerHTML = '<span>Invio in corso...</span>';
+            });
+        });
+    </script>
+
+    <!-- SCRIPT GOOGLE MAPS (Sostituisci TUO_NUOVO_API_KEY_GOOGLE con la tua chiave protetta) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TUO_NUOVO_API_KEY_GOOGLE&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const locations = [
+                { lat: 40.79680, lng: 17.11830, title: 'Agenzia di Noci', address: 'Via Sold. Raffaele Tinelli, 14, 70015 Noci (BA)' },
+                { lat: 40.85201, lng: 17.12054, title: 'Agenzia di Putignano', address: 'Via Derna, 39, 70017 Putignano (BA)' }
+            ];
+
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: { lat: 40.8244, lng: 17.11942 },
+                disableDefaultUI: true,
+                zoomControl: true,
+                styles: [
+                    { featureType: "all", elementType: "labels.text.fill", stylers: [{ color: "#475569" }] },
+                    { featureType: "landscape", elementType: "all", stylers: [{ color: "#f8fafc" }] },
+                    { featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
+                    { featureType: "water", elementType: "all", stylers: [{ color: "#e2e8f0" }] }
+                ]
+            });
+
+            const infoWindow = new google.maps.InfoWindow();
+
+            locations.forEach(loc => {
+                const marker = new google.maps.Marker({
+                    position: { lat: loc.lat, lng: loc.lng },
+                    map: map,
+                    title: loc.title,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        fillColor: '#c20e6a',
+                        fillOpacity: 1,
+                        strokeColor: '#ffffff',
+                        strokeWeight: 2,
+                        scale: 8
+                    }
+                });
+
+                marker.addListener('click', () => {
+                    const content = `
+                        <div class="map-info-window">
+                            <h4>${loc.title}</h4>
+                            <p>${loc.address}</p>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(loc.address)}" target="_blank" rel="noopener noreferrer">
+                                Ottieni Indicazioni
+                            </a>
+                        </div>`;
+                    infoWindow.setContent(content);
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
