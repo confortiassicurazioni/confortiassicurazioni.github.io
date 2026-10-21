@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assicurazione AutoMoto&Van | Conforti Assicurazioni</title>
+    <meta name="description" content="Proteggi la tua auto, moto o van con l'Assicurazione AutoMoto&Van di Bene Assicurazioni. RC Auto, garanzia Comfort, RiparaBene e assistenza stradale H24.">
+
+    <!-- CookieYes Banner (Sostituisci TUO_NUOVO_ID con la chiave generata) -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/TUO_NUOVO_ID/script.js"></script>
+
+    <!-- FontAwesome 6.4 (Icone semantiche con aria-hidden) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* --- TOKENS SISTEMICI IDENTICI ALLA HOME --- */
+        :root {
+            --brand-primary: #0a2540;
+            --brand-primary-hover: #123456;
+            --brand-accent: #c20e6a;
+            --brand-accent-hover: #a30b59;
+            --brand-accent-subtle: #fdf2f7;
+            
+            --surface-ground: #f8fafc;
+            --surface-base: #ffffff;
+            --surface-muted: #f1f5f9;
+            --surface-overlay: #ffffff;
+
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-inverse: #ffffff;
+
+            --border-subtle: #e2e8f0;
+            --border-strong: #cbd5e1;
+
+            --state-success: #059669;
+            --state-success-bg: #ecfdf5;
+
+            --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            
+            --shadow-contact: 0 1px 2px 0 rgba(10, 37, 64, 0.04);
+            --shadow-ambient: 0 8px 24px -4px rgba(10, 37, 64, 0.06);
+            --shadow-hover: 0 12px 32px -4px rgba(10, 37, 64, 0.10);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 96px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--surface-ground);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        :focus:not(:focus-visible) { outline: none; }
+        :focus-visible {
+            outline: 2px solid var(--brand-accent);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+            width: 100%;
+        }
+
+        .tabular { font-variant-numeric: tabular-nums; }
+        .prose-measure { max-width: 65ch; }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: inline-flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .logo-main {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--brand-primary);
+            line-height: 1.1;
+        }
+        .logo-main span { color: var(--brand-accent); }
+        .logo-sub {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 150ms var(--ease-out-expo);
+        }
+        nav a:hover { color: var(--brand-primary); }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            background-color: var(--surface-muted);
+            color: var(--brand-primary);
+            border: 1px solid var(--border-subtle);
+            border-radius: 999px;
+            text-decoration: none;
+            transition: all 150ms var(--ease-out-expo);
+        }
+        .header-cta:hover {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        /* --- BOTTONI --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 44px;
+            padding: 10px 22px;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 150ms var(--ease-out-expo);
+            user-select: none;
+        }
+        .btn:active { transform: scale(0.98); }
+        .btn-primary { background-color: var(--brand-accent); color: var(--text-inverse); box-shadow: var(--shadow-contact); }
+        .btn-primary:hover { background-color: var(--brand-accent-hover); }
+        .btn-secondary { background-color: var(--surface-base); color: var(--brand-primary); border-color: var(--border-subtle); box-shadow: var(--shadow-contact); }
+        .btn-secondary:hover { background-color: var(--surface-muted); border-color: var(--border-strong); }
+
+        /* --- SEZIONI --- */
+        section { padding: 88px 0; }
+        .section-header { margin-bottom: 48px; }
+        .section-header.center { text-align: center; display: flex; flex-direction: column; align-items: center;}
+        .section-header h2 {
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            color: var(--brand-primary);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .section-header p { color: var(--text-secondary); font-size: 1rem; }
+
+        /* --- HERO PRODOTTO --- */
+        .hero-product {
+            padding: 72px 0;
+            background-color: var(--surface-base);
+            border-bottom: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+        .hero-product .hero-icon {
+            font-size: 3rem;
+            color: var(--brand-accent);
+            margin-bottom: 24px;
+        }
+        .hero-product h1 {
+            font-size: 2.65rem;
+            letter-spacing: -0.025em;
+            color: var(--brand-primary);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .hero-product p {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            margin: 0 auto 32px auto;
+            line-height: 1.65;
+        }
+
+        /* --- BENTO GRID GARANZIE --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-card {
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--shadow-contact);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .bento-half { grid-column: span 6; }
+        .bento-third { grid-column: span 4; }
+
+        .bento-featured {
+            background: linear-gradient(135deg, #ffffff 60%, var(--brand-accent-subtle) 100%);
+            border-color: rgba(194, 14, 106, 0.25);
+        }
+        
+        .bento-card .icon-box {
+            width: 44px; height: 44px;
+            border-radius: 8px;
+            background-color: var(--surface-muted);
+            color: var(--brand-primary);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+        .bento-featured .icon-box { background-color: var(--brand-accent); color: #ffffff; }
+
+        .bento-card h3 {
+            font-size: 1.25rem;
+            color: var(--brand-primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .bento-card p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        .bento-card ul {
+            margin-top: 16px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        .bento-card ul i { color: var(--brand-accent); margin-right: 8px; width: 16px; text-align: center;}
+
+        /* --- DOCUMENT CENTER DINAMICO --- */
+        #documenti {
+            background-color: var(--surface-base);
+            border-top: 1px solid var(--border-subtle);
+        }
+        .doc-center-wrapper {
+            background-color: var(--surface-ground);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--shadow-ambient);
+        }
+        
+        /* Controlli (Search + Tabs) */
+        .doc-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .doc-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .doc-tab-btn {
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-family: var(--font-sans);
+            font-size: 0.8125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 150ms var(--ease-out-expo);
+        }
+        .doc-tab-btn:hover { background-color: var(--surface-muted); color: var(--brand-primary); }
+        .doc-tab-btn.active {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        /* Search Bar con Safe Mobile Font */
+        .doc-search-wrapper {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+        }
+        .doc-search-wrapper i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+        .doc-search-input {
+            width: 100%;
+            padding: 10px 14px 10px 40px;
+            font-family: var(--font-sans);
+            font-size: 1rem; /* 16px per bloccare zoom iOS Safari */
+            color: var(--text-primary);
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            transition: border-color 150ms;
+        }
+        @media (min-width: 768px) { .doc-search-input { font-size: 0.875rem; } }
+        .doc-search-input:focus-visible {
+            border-color: var(--brand-accent);
+            box-shadow: 0 0 0 3px rgba(194, 14, 106, 0.15);
+            outline: none;
+        }
+
+        /* Risultati Documenti */
+        .doc-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .doc-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            gap: 16px;
+        }
+        .doc-item:last-child { border-bottom: none; }
+        .doc-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .doc-title {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--brand-primary);
+            line-height: 1.3;
+        }
+        .doc-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .doc-badge {
+            background-color: var(--surface-muted);
+            color: var(--text-secondary);
+            font-size: 0.6875rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .doc-download-btn {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--brand-accent);
+            background-color: var(--brand-accent-subtle);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 150ms;
+        }
+        .doc-download-btn:hover { opacity: 0.85; }
+        .doc-empty-state {
+            text-align: center;
+            padding: 48px 24px;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* --- FOOTER (Identico alla Home) --- */
+        footer {
+            background-color: var(--brand-primary);
+            color: #cbd5e1;
+            padding: 64px 0 32px;
+            font-size: 0.8125rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: auto;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px;
+            padding-bottom: 48px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer-col h4 { color: #ffffff; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-col a { color: #cbd5e1; text-decoration: none; transition: color 150ms; }
+        .footer-col a:hover { color: var(--brand-accent-subtle); text-decoration: underline; }
+        .footer-bottom { padding-top: 32px; font-size: 0.75rem; color: #94a3b8; line-height: 1.6; }
+
+        /* PREFERS REDUCED MOTION */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .bento-half, .bento-third { grid-column: span 12; }
+            .footer-grid { grid-template-columns: 1fr; }
+            nav { display: none; }
+            .doc-item { flex-direction: column; align-items: flex-start; }
+            .doc-download-btn { width: 100%; justify-content: center; margin-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Torna alla Homepage">
+                <span class="logo-main">conforti<span>.</span></span>
+                <span class="logo-sub">bene assicurazioni</span>
+            </a>
+            <nav aria-label="Navigazione principale">
+                <ul>
+                    <li><a href="index.html#polizze">Soluzioni</a></li>
+                    <li><a href="index.html#chi-sono">L'Intermediario</a></li>
+                    <li><a href="index.html#sedi">Sedi</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contatti" class="header-cta">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                <span>Consulenza Diretta</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO PRODOTTO -->
+        <section class="hero-product">
+            <div class="container">
+                <div class="hero-icon"><i class="fa-solid fa-car-side" aria-hidden="true"></i></div>
+                <h1>Assicurazione AutoMoto&Van</h1>
+                <p class="prose-measure">
+                    Non solo copertura obbligatoria RC: costruisci una protezione su misura per il tuo veicolo con l'assistenza dedicata della nostra agenzia e l'affidabilità di Bene Assicurazioni.
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#contatti" class="btn btn-primary">Richiedi Preventivo in Agenzia</a>
+                    <a href="#garanzie" class="btn btn-secondary">Scopri le Garanzie</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GARANZIE ESCLUSIVE BENE -->
+        <section id="esclusive" style="padding-bottom: 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>I Vantaggi Esclusivi di Bene</h2>
+                    <p class="prose-measure">Formule uniche pensate per tutelare la tua classe di merito e offrirti la massima efficienza in caso di riparazione.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- RIPARABENE -->
+                    <div class="bento-card bento-half bento-featured">
+                        <div class="icon-box"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+                        <h3>Formula RiparaBene</h3>
+                        <p>L’opzione intelligente che ti premia con uno <strong>sconto sul premio RC Auto</strong>. Scegliendo di far riparare il tuo veicolo esclusivamente presso i nostri oltre 600 centri convenzionati, ottieni:</p>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Corsia preferenziale e riparazioni ultra-rapide.</li>
+                            <li><i class="fa-solid fa-check"></i> Zero anticipi: paghiamo noi la carrozzeria.</li>
+                            <li><i class="fa-solid fa-check"></i> Mobilità garantita con auto sostitutiva.</li>
+                        </ul>
+                    </div>
+
+                    <!-- GARANZIA COMFORT -->
+                    <div class="bento-card bento-half bento-featured">
+                        <div class="icon-box"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></div>
+                        <h3>Garanzia Comfort</h3>
+                        <p>Il malus dopo un incidente non è più un problema. Se causi un sinistro e decidi di rimborsarlo tramite la Stanza di Compensazione (Consap) per salvare la tua classe di merito, Bene ti tutela:</p>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Ti restituiamo il <strong>90% dell'importo</strong> pagato (fino a 1.000€).</li>
+                            <li><i class="fa-solid fa-check"></i> Rimborso spese per patente o chiavi smarrite.</li>
+                            <li><i class="fa-solid fa-check"></i> Ripristino Airbag a seguito di incidente coperto.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALTRE GARANZIE (GRID) -->
+        <section id="garanzie">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tutte le Garanzie per il Tuo Veicolo</h2>
+                    <p class="prose-measure">Personalizza la tua polizza scegliendo il livello di protezione adatto a te e al tuo mezzo.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-card bento-third">
+                        <div class="icon-box"><i class="fa-solid fa-car-burst" aria-hidden="true"></i></div>
+                        <h3>Responsabilità Civile (RCA)</h3>
+                        <p>La copertura obbligatoria che tutela te e il tuo patrimonio rimborsando i danni materiali e fisici causati involontariamente a terzi durante la circolazione.</p>
+                    </div>
+
+                    <div class="bento-card bento-third">
+                        <div class="icon-box"><i class="fa-solid fa-user-injured" aria-hidden="true"></i></div>
+                        <h3>Infortuni Conducente</h3>
+                        <p>L'RCA non copre chi è alla guida. Questa garanzia protegge te: indennizzo per invalidità permanente, decesso e rimborso spese mediche in caso di incidente con colpa.</p>
+                    </div>
+
+                    <div class="bento-card bento-third">
+                        <div class="icon-box"><i class="fa-solid fa-truck-pickup" aria-hidden="true"></i></div>
+                        <h3>Assistenza Stradale</h3>
+                        <p>Soccorso H24, officina mobile, recupero veicolo fuori strada e rientro a casa. Mai più fermi in strada in caso di guasto, foratura o incidente.</p>
+                    </div>
+
+                    <div class="bento-card bento-third">
+                        <div class="icon-box"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+                        <h3>Tutela Legale</h3>
+                        <p>Copertura delle spese legali, processuali e peritali per controversie civili e penali derivanti dalla circolazione, incluse vertenze per risarcimento danni.</p>
+                    </div>
+
+                    <div class="bento-card bento-third">
+                        <div class="icon-box"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i></div>
+                        <h3>Furto e Incendio</h3>
+                        <p>Indennizzo dei danni materiali subiti dal veicolo per furto (anche tentato), rapina, incendio o scoppio. Rimborso calcolato sul reale valore commerciale.</p>
+                    </div>
+
+                    <div class="bento-card bento-third">
+                        <div class="icon-box"><i class="fa-solid fa-cloud-bolt" aria-hidden="true"></i></div>
+                        <h3>Eventi Naturali & Cristalli</h3>
+                        <p>Protezione da grandine, alluvioni, trombe d'aria e rottura vetri. \n Franchigia agevolata (o azzerata) riparando presso il nostro network convenzionato (es. Dottor Grandine / Carglass).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOCUMENT CENTER DINAMICO -->
+        <section id="documenti">
+            <div class="container">
+                <div class="section-header center">
+                    <h2>Set Informativi e Condizioni (CGA)</h2>
+                    <p class="prose-measure" style="text-align: center;">Trasparenza totale: consulta e scarica i documenti precontrattuali aggiornati per tutte le tipologie di veicoli assicurabili con Bene.</p>
+                </div>
+
+                <div class="doc-center-wrapper">
+                    <div class="doc-controls">
+                        <!-- Search Bar -->
+                        <div class="doc-search-wrapper">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            <input type="text" id="docSearch" class="doc-search-input" placeholder="Cerca per veicolo o edizione (es. 2026)..." aria-label="Cerca documenti informativi">
+                        </div>
+                        
+                        <!-- Filtri Categoria -->
+                        <div class="doc-tabs" id="catTabs" role="tablist" aria-label="Filtro per tipologia di veicolo">
+                            <button class="doc-tab-btn active" data-cat="all" role="tab" aria-selected="true">Tutti i Veicoli</button>
+                            <button class="doc-tab-btn" data-cat="auto" role="tab" aria-selected="false">Auto</button>
+                            <button class="doc-tab-btn" data-cat="moto" role="tab" aria-selected="false">Moto e Ciclomotori</button>
+                            <button class="doc-tab-btn" data-cat="altri" role="tab" aria-selected="false">Autocarri e Van</button>
+                            <button class="doc-tab-btn" data-cat="natanti" role="tab" aria-selected="false">Natanti</button>
+                            <button class="doc-tab-btn" data-cat="monopattini" role="tab" aria-selected="false">Monopattini</button>
+                        </div>
+
+                        <!-- Filtri Stato (Vigore/Archivio) -->
+                        <div class="doc-tabs" id="statusTabs" role="tablist" aria-label="Filtro per stato validità">
+                            <button class="doc-tab-btn active" data-status="vigore" role="tab" aria-selected="true"><i class="fa-solid fa-check" style="margin-right: 6px;"></i>In Vigore</button>
+                            <button class="doc-tab-btn" data-status="archivio" role="tab" aria-selected="false"><i class="fa-solid fa-box-archive" style="margin-right: 6px;"></i>Archivio Storico</button>
+                        </div>
+                    </div>
+
+                    <!-- Lista Risultati -->
+                    <div class="doc-list" id="docList" aria-live="polite">
+                        <!-- I documenti verranno inseriti qui dal JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER IDENTICO ALLA HOME -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Identificativi Intermediario</h4>
+                    <ul>
+                        <li><strong>Agente Monomandatario:</strong> Rocco Conforti</li>
+                        <li><strong>Registro RUI:</strong> Sezione A — n. A000099409</li>
+                        <li><strong>Data Iscrizione:</strong> 11/05/2007</li>
+                        <li><strong>Partita IVA:</strong> 02144310725</li>
+                        <li><strong>Sede Legale:</strong> Via Sold. Raffaele Tinelli 14, 70015 Noci (BA)</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mandato & Recapiti</h4>
+                    <ul>
+                        <li>Intermediario per <strong>Bene Assicurazioni S.p.A.</strong></li>
+                        <li>Soggetto alla vigilanza dell'<strong>IVASS</strong>.</li>
+                        <li>Telefono: <a href="tel:+390804972013">080 497 2013</a></li>
+                        <li>Email: <a href="mailto:rocco.conf@libero.it">rocco.conf@libero.it</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Trasparenza & Informazioni</h4>
+                    <ul>
+                        <li><a href="index.html#chi-sono">Iscrizione IVASS & RUI</a></li>
+                        <li><a href="privacy-policy.html">Informativa Privacy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    L’attività di intermediazione assicurativa è svolta in conformità al Regolamento IVASS n. 40/2018. Le informazioni presenti su questo sito hanno scopo puramente illustrativo e non sostituiscono i Set Informativi precontrattuali forniti prima della sottoscrizione di ogni polizza, consultabili integralmente nell'apposita sezione.
+                </p>
+                <p style="margin-top: 12px;">© <span id="current-year">2026</span> Rocco Conforti. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS LOGIC: Motore Documentale Dinamico -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Database Documenti estratti dal sorgente Ufficiale
+            const docDatabase = [
+                // AUTO IN VIGORE
+                { title: "Set Informativo AutoMotoVan: Auto - Edizione 01/2026", cat: "auto", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_AutoMotoVan_Auto_Edizione_01_2026-1.pdf" },
+                { title: "Set Informativo AutoMotoVan: Auto - Edizione 07/2025", cat: "auto", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_AutoMotoVan_Auto_edizione_072025.pdf" },
+                { title: "Set Informativo AutoMotoVan: Auto - Edizione 01/2025", cat: "auto", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_Automotovan_Auto_ed_012025_0425.pdf" },
+                // MOTO IN VIGORE
+                { title: "Set Informativo AutoMotoVan: Moto - Edizione 01/2026", cat: "moto", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_AutoMotoVan_Moto_Edizione_01_2026.pdf" },
+                { title: "Set Informativo AutoMotoVan: Moto - Edizione 07/2025", cat: "moto", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_AutoMotoVan_Moto_edizione_072025.pdf" },
+                // AUTOCARRI IN VIGORE
+                { title: "Set Informativo AutoMotoVan: Altri Veicoli - Edizione 01/2026", cat: "altri", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_AutoMotoVan_Altri_Veicoli_Edizione_01_2026.pdf" },
+                { title: "Set Informativo AutoMotoVan: Altri Veicoli - Edizione 07/2025", cat: "altri", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_AutoMotoVan_Altri_Veicoli_edizione_072025.pdf" },
+                // NATANTI IN VIGORE
+                { title: "Set Informativo AutoMotoVan: Natanti - Edizione 01/2026", cat: "natanti", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_AutoMotoVan_Natanti_Edizione_01_2026.pdf" },
+                { title: "Set Informativo AutoMotoVan: Natanti - Edizione 01/2025", cat: "natanti", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_Bene_Natanti_ed_012025_0425.pdf" },
+                // MONOPATTINI IN VIGORE
+                { title: "Set Informativo Monopattini - Edizione 05/2026", cat: "monopattini", status: "vigore", url: "https://www.bene.it/assets/Set_Informativo_Monopattini_Ed_05_2026.pdf" },
+
+                // ARCHIVIO STORICO (Selezione rappresentativa)
+                { title: "Set Informativo AutoMotoVan: Auto - Ed. 05/2024", cat: "auto", status: "archivio", url: "https://www.bene.it/wp-content/uploads/2024/04/Set-Informativo-AutoMotoVAN-Auto-Edizione-2024-05.pdf" },
+                { title: "Set Informativo AutoMotoVan: Auto - Ed. 11/2023", cat: "auto", status: "archivio", url: "https://www.bene.it/wp-content/uploads/2023/09/SET_INFORMATIVO_AUTOMOTOVAN_AUTO_ED_112023.pdf" },
+                { title: "Set Informativo AutoMotoVan: Moto - Ed. 11/2023", cat: "moto", status: "archivio", url: "https://www.bene.it/wp-content/uploads/2023/09/SET_INFORMATIVO_AUTOMOTOVAN_MOTO_ED_112023.pdf" },
+                { title: "Set Informativo AutoMotoVan: Altri Veicoli - Ed. 05/2024", cat: "altri", status: "archivio", url: "https://www.bene.it/wp-content/uploads/2024/04/Set-Informativo-AutoMotoVAN-Altri-veicoli-Edizione-2024-05.pdf" },
+                { title: "Set Informativo AutoMotoVan: Natanti - Ed. 11/2023", cat: "natanti", status: "archivio", url: "https://www.bene.it/wp-content/uploads/2023/09/SET_INFORMATIVO_AUTOMOTOVAN_NATANTI_ED_112023.pdf" }
+            ];
+
+            let state = { status: 'vigore', cat: 'all', query: '' };
+            const docListEl = document.getElementById('docList');
+
+            // Render function
+            const renderDocuments = () => {
+                const filtered = docDatabase.filter(d => 
+                    d.status === state.status &&
+                    (state.cat === 'all' || d.cat === state.cat) &&
+                    d.title.toLowerCase().includes(state.query.toLowerCase())
+                );
+
+                if (filtered.length === 0) {
+                    docListEl.innerHTML = `<div class="doc-empty-state">Nessun documento trovato per i filtri selezionati.</div>`;
+                    return;
+                }
+
+                docListEl.innerHTML = filtered.map(d => `
+                    <div class="doc-item">
+                        <div class="doc-info">
+                            <span class="doc-title">${d.title}</span>
+                            <div class="doc-meta">
+                                <span class="doc-badge tabular">${d.cat === 'altri' ? 'Van/Autocarri' : d.cat}</span>
+                                <span class="doc-badge" style="background-color: ${d.status === 'vigore' ? 'var(--state-success-bg)' : 'var(--surface-muted)'}; color: ${d.status === 'vigore' ? 'var(--state-success)' : 'var(--text-muted)'};">
+                                    ${d.status === 'vigore' ? 'In Vigore' : 'Archivio Storico'}
+                                </span>
+                            </div>
+                        </div>
+                        <a href="${d.url}" target="_blank" rel="noopener noreferrer" class="doc-download-btn" aria-label="Scarica PDF ${d.title}">
+                            <span>Scarica PDF</span>
+                            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                `).join('');
+            };
+
+            // Event Listeners (Tabs & Search)
+            document.getElementById('catTabs').addEventListener('click', (e) => {
+                if(e.target.tagName !== 'BUTTON') return;
+                document.querySelectorAll('#catTabs .doc-tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                e.target.classList.add('active');
+                e.target.setAttribute('aria-selected', 'true');
+                state.cat = e.target.getAttribute('data-cat');
+                renderDocuments();
+            });
+
+            document.getElementById('statusTabs').addEventListener('click', (e) => {
+                const btn = e.target.closest('button');
+                if(!btn) return;
+                document.querySelectorAll('#statusTabs .doc-tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                state.status = btn.getAttribute('data-status');
+                renderDocuments();
+            });
+
+            document.getElementById('docSearch').addEventListener('input', (e) => {
+                state.query = e.target.value;
+                renderDocuments();
+            });
+
+            // Initial render
+            renderDocuments();
+
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
