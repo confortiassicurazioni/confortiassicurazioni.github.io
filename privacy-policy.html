@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Conforti Assicurazioni</title>
+    <meta name="description" content="Informativa sul trattamento dei dati personali (Privacy Policy) di Conforti Assicurazioni ai sensi del Regolamento UE 2016/679 (GDPR).">
+
+    <!-- CookieYes Banner (Sostituisci TUO_NUOVO_ID con la chiave generata) -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/TUO_NUOVO_ID/script.js"></script>
+
+    <!-- FontAwesome 6.4 (Icone semantiche) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* --- TOKENS SISTEMICI --- */
+        :root {
+            --brand-primary: #0a2540;
+            --brand-primary-hover: #123456;
+            --brand-accent: #c20e6a;
+            --brand-accent-hover: #a30b59;
+            --brand-accent-subtle: #fdf2f7;
+            
+            --surface-ground: #f8fafc;
+            --surface-base: #ffffff;
+            --surface-muted: #f1f5f9;
+
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-inverse: #ffffff;
+
+            --border-subtle: #e2e8f0;
+            --border-strong: #cbd5e1;
+
+            --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--surface-ground);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        :focus:not(:focus-visible) { outline: none; }
+        :focus-visible {
+            outline: 2px solid var(--brand-accent);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+            width: 100%;
+        }
+
+        .tabular { font-variant-numeric: tabular-nums; }
+        
+        /* TYPO.MEASURE.001 - Confinamento lunghezza di riga per leggibilità ottimale */
+        .prose-measure { max-width: 68ch; }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            backdrop-filter: blur(8px);
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+        .logo { text-decoration: none; display: inline-flex; flex-direction: column; cursor: pointer; }
+        .logo-main { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; color: var(--brand-primary); line-height: 1.1; }
+        .logo-main span { color: var(--brand-accent); }
+        .logo-sub { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+        
+        nav ul { display: flex; list-style: none; gap: 32px; align-items: center; }
+        nav a { text-decoration: none; color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; transition: color 150ms var(--ease-out-expo); }
+        nav a:hover { color: var(--brand-primary); }
+
+        .header-cta {
+            display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
+            font-size: 0.8125rem; font-weight: 600; background-color: var(--surface-muted); color: var(--brand-primary);
+            border: 1px solid var(--border-subtle); border-radius: 999px; text-decoration: none;
+            transition: all 150ms var(--ease-out-expo);
+        }
+        .header-cta:hover { background-color: var(--brand-primary); color: var(--text-inverse); border-color: var(--brand-primary); }
+
+        /* --- PAGE CONTENT (Legal Layout) --- */
+        .page-header {
+            padding: 72px 0 48px 0;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--brand-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .page-header p {
+            color: var(--text-secondary);
+            font-size: 1.0625rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .legal-wrapper {
+            background-color: var(--surface-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 48px;
+            box-shadow: var(--shadow-contact);
+            margin-bottom: 88px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Gestalt Proximity & Typographic Hierarchy */
+        .legal-content h2 {
+            font-size: 1.5rem;
+            color: var(--brand-primary);
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-subtle);
+            letter-spacing: -0.01em;
+        }
+        .legal-content h2:first-of-type { margin-top: 0; }
+        
+        .legal-content h3 {
+            font-size: 1.125rem;
+            color: var(--brand-primary);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .legal-content p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .legal-content ul {
+            list-style-type: none;
+            margin-bottom: 24px;
+            padding-left: 0;
+        }
+        .legal-content ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .legal-content ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--brand-accent);
+            font-weight: bold;
+        }
+
+        .legal-content a {
+            color: var(--brand-accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .legal-content a:hover { text-decoration: underline; }
+
+        .legal-footer {
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+            text-align: center;
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+        }
+
+        /* --- FOOTER IDENTICO --- */
+        footer {
+            background-color: var(--brand-primary);
+            color: #cbd5e1;
+            padding: 64px 0 32px;
+            font-size: 0.8125rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: auto;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px;
+            padding-bottom: 48px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer-col h4 { color: #ffffff; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-col a { color: #cbd5e1; text-decoration: none; transition: color 150ms; }
+        .footer-col a:hover { color: var(--brand-accent-subtle); text-decoration: underline; }
+        .footer-bottom { padding-top: 32px; font-size: 0.75rem; color: #94a3b8; line-height: 1.6; }
+
+        /* PREFERS REDUCED MOTION */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+        }
+
+        @media (max-width: 992px) {
+            nav { display: none; }
+            .legal-wrapper { padding: 32px 24px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Torna alla Homepage">
+                <span class="logo-main">conforti<span>.</span></span>
+                <span class="logo-sub">bene assicurazioni</span>
+            </a>
+            <nav aria-label="Navigazione principale">
+                <ul>
+                    <li><a href="index.html#polizze">Soluzioni</a></li>
+                    <li><a href="index.html#chi-sono">L'Intermediario</a></li>
+                    <li><a href="index.html#sedi">Sedi</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contatti" class="header-cta">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                <span>Consulenza Diretta</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header container">
+            <h1>Privacy Policy</h1>
+            <p>Informativa sul trattamento dei dati personali ai sensi dell’art. 13 del Regolamento UE 2016/679 (GDPR).</p>
+        </section>
+
+        <div class="container">
+            <div class="legal-wrapper prose-measure">
+                <div class="legal-content">
+                    
+                    <h2>1. Titolare del Trattamento</h2>
+                    <p>Ai fini della presente informativa, il Titolare del Trattamento dei dati personali raccolti attraverso questo sito web è:</p>
+                    <p>
+                        <strong>Rocco Conforti</strong><br>
+                        Agente Monomandatario Bene Assicurazioni S.p.A. Società Benefit<br>
+                        Sede Legale: Via Sold. Raffaele Tinelli 14, 70015 Noci (BA)<br>
+                        Email: <a href="mailto:rocco.conf@libero.it">rocco.conf@libero.it</a><br>
+                        PEC: <a href="mailto:confortirocco@pec.it">confortirocco@pec.it</a>
+                    </p>
+
+                    <h2>2. Dati personali raccolti e Finalità</h2>
+                    <p>Il sito raccoglie dati personali forniti volontariamente dall'utente o acquisiti automaticamente durante la navigazione:</p>
+                    
+                    <h3>A. Dati forniti volontariamente dall'utente</h3>
+                    <p>Attraverso la compilazione del modulo di contatto, l'utente fornisce dati quali Nome, Cognome, Indirizzo Email, Numero di Telefono e il contenuto del messaggio.</p>
+                    <ul>
+                        <li><strong>Finalità:</strong> Rispondere alle richieste di consulenza, fornire preventivi assicurativi e ricontattare l'utente.</li>
+                        <li><strong>Base Giuridica:</strong> Esecuzione di misure precontrattuali adottate su richiesta dell'interessato (Art. 6, par. 1, lett. b, GDPR).</li>
+                    </ul>
+
+                    <h3>B. Dati di navigazione</h3>
+                    <p>I sistemi informatici preposti al funzionamento di questo sito web acquisiscono implicitamente dati come indirizzi IP, tipo di browser, nomi a dominio dei computer utilizzati per connettersi al sito, orari di richiesta e altri parametri relativi al sistema operativo.</p>
+                    <ul>
+                        <li><strong>Finalità:</strong> Garantire il corretto funzionamento tecnico del sito web e la sicurezza informatica.</li>
+                        <li><strong>Base Giuridica:</strong> Legittimo interesse del Titolare al corretto funzionamento e alla sicurezza della piattaforma (Art. 6, par. 1, lett. f, GDPR).</li>
+                    </ul>
+
+                    <h2>3. Servizi Esterni e Trasferimento Dati</h2>
+                    <p>Per il funzionamento del sito e l'erogazione dei servizi, il Titolare si avvale di piattaforme tecnologiche di terze parti che operano come Responsabili o Titolari autonomi del trattamento:</p>
+                    
+                    <h3>Modulo di Contatto (Formspree)</h3>
+                    <p>La gestione tecnica dell'invio dei messaggi tramite il modulo contatti è affidata a <strong>Formspree Inc.</strong> I dati inseriti nel form vengono elaborati dai server di Formspree (situati negli Stati Uniti) al solo scopo di inoltrare la comunicazione in formato email alla casella di posta del Titolare. Tale trasferimento avviene nel rispetto delle garanzie previste dal GDPR. (<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy di Formspree</a>).</p>
+
+                    <h3>Mappe e Posizione (Google Maps)</h3>
+                    <p>Per indicare la posizione delle agenzie, il sito utilizza i servizi di <strong>Google Maps Platform</strong>. L'interazione con le mappe comporta l'invio di dati tecnici di navigazione e dell'indirizzo IP a Google LLC (Irlanda/Stati Uniti). L'attivazione di tali mappe è subordinata al consenso dell'utente tramite il banner cookie. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>).</p>
+
+                    <h3>Gestione Consensi (CookieYes)</h3>
+                    <p>Per documentare e gestire il consenso all'uso dei cookie e il rispetto delle preferenze privacy, il sito utilizza <strong>CookieYes</strong>. Questo strumento registra l'avvenuta accettazione o il rifiuto da parte dell'utente in forma anonimizzata.</p>
+
+                    <h2>4. Modalità e Tempi di Conservazione</h2>
+                    <p>I dati personali sono trattati con strumenti informatici e telematici nel rispetto dei principi di liceità, correttezza e trasparenza. Non viene effettuata alcuna profilazione automatizzata a scopi di marketing occulto.</p>
+                    <p>I dati forniti tramite il modulo di contatto saranno conservati esclusivamente per il tempo necessario ad evadere la richiesta di preventivo o consulenza e, qualora la richiesta si traduca in un rapporto contrattuale (emissione della polizza), per il periodo richiesto dalla normativa assicurativa e civile in vigore (solitamente 10 anni).</p>
+
+                    <h2>5. I Diritti dell'Interessato</h2>
+                    <p>In qualunque momento, l'utente può esercitare i diritti previsti dagli articoli 15 e seguenti del GDPR, tra cui:</p>
+                    <ul>
+                        <li><strong>Diritto di accesso:</strong> ottenere conferma che sia o meno in corso un trattamento di dati personali.</li>
+                        <li><strong>Diritto di rettifica:</strong> ottenere la correzione di dati inesatti o l'integrazione di quelli incompleti.</li>
+                        <li><strong>Diritto alla cancellazione (oblio):</strong> richiedere l'eliminazione dei propri dati quando non più necessari.</li>
+                        <li><strong>Diritto di opposizione e limitazione:</strong> opporsi al trattamento in casi specifici previsti dalla legge.</li>
+                    </ul>
+                    <p>Per esercitare tali diritti, è possibile inviare una comunicazione scritta all'indirizzo email <a href="mailto:rocco.conf@libero.it">rocco.conf@libero.it</a>. Qualora l'utente ritenga che il trattamento violi le disposizioni del GDPR, ha il diritto di proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>).</p>
+                    
+                </div>
+                
+                <div class="legal-footer">
+                    Documento aggiornato al <span id="update-date" class="tabular"></span>.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER IDENTICO ALLA HOME -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Identificativi Intermediario</h4>
+                    <ul>
+                        <li><strong>Agente Monomandatario:</strong> Rocco Conforti</li>
+                        <li><strong>Registro RUI:</strong> Sezione A — n. A000099409</li>
+                        <li><strong>Data Iscrizione:</strong> 11/05/2007</li>
+                        <li><strong>Partita IVA:</strong> 02144310725</li>
+                        <li><strong>Sede Legale:</strong> Via Sold. Raffaele Tinelli 14, 70015 Noci (BA)</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mandato & Recapiti</h4>
+                    <ul>
+                        <li>Intermediario per <strong>Bene Assicurazioni S.p.A.</strong></li>
+                        <li>Soggetto alla vigilanza dell'<strong>IVASS</strong>.</li>
+                        <li>Telefono: <a href="tel:+390804972013">080 497 2013</a></li>
+                        <li>Email: <a href="mailto:rocco.conf@libero.it">rocco.conf@libero.it</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Trasparenza & Informazioni</h4>
+                    <ul>
+                        <li><a href="index.html#chi-sono">Iscrizione IVASS & RUI</a></li>
+                        <li><a href="privacy-policy.html">Informativa Privacy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    L’attività di intermediazione assicurativa è svolta in conformità al Regolamento IVASS n. 40/2018.
+                </p>
+                <p style="margin-top: 12px;">© <span id="current-year">2026</span> Rocco Conforti. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            
+            // Imposta l'anno corrente nel footer
+            document.getElementById('current-year').textContent = today.getFullYear();
+            
+            // Imposta dinamicamente la data di ultimo aggiornamento della policy ad oggi
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            document.getElementById('update-date').textContent = today.toLocaleDateString('it-IT', options);
+        });
+    </script>
+</body>
+</html>
