@@ -6,7 +6,7 @@
     <title>Conforti Assicurazioni | Agente Monomandatario Bene Assicurazioni</title>
     <meta name="description" content="Rocco Conforti, Agente Monomandatario Bene Assicurazioni S.p.A. Società Benefit. Iscritto RUI Sezione A (A000099409). Sedi a Noci e Putignano.">
 
-    <!-- CookieYes Banner -->
+    <!-- CookieYes Banner (Sostituisci TUO_NUOVO_ID con la chiave generata) -->
     <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/TUO_NUOVO_ID/script.js"></script>
 
     <!-- FontAwesome 6.4 (Icone semantiche con aria-hidden) -->
@@ -300,17 +300,18 @@
             margin-bottom: 16px;
         }
 
-        .hero-avatar {
+        .hero-icon-badge {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background-color: var(--border-strong);
-            background-image: url('Profilo.jpg');
-            background-size: cover;
-            background-position: center;
+            background-color: var(--brand-accent-subtle);
+            color: var(--brand-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
             flex-shrink: 0;
-            border: 2px solid var(--surface-base);
-            box-shadow: var(--shadow-contact);
+            border: 1px solid rgba(194, 14, 106, 0.2);
         }
 
         .hero-meta-grid {
@@ -454,25 +455,46 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 64px;
+            grid-template-columns: 360px 1fr;
+            gap: 56px;
             align-items: start;
+        }
+
+        /* FOTO DELL'AGENZIA (NON PIÙ FOTO PROFILO PERSONALE) */
+        .agency-photo-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
         .about-photo {
             width: 100%;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 4 / 3;
             border-radius: 12px;
             background-color: var(--surface-muted);
-            background-image: url('Profilo.jpg');
+            background-image: url('agenzia.jpg');
             background-size: cover;
             background-position: center;
             border: 1px solid var(--border-subtle);
             box-shadow: var(--shadow-ambient);
+            position: relative;
+        }
+
+        .about-photo-badge {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(10, 37, 64, 0.85);
+            backdrop-filter: blur(4px);
+            color: #ffffff;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.04em;
         }
 
         .mandate-box {
-            margin-top: 24px;
             padding: 20px;
             background-color: var(--surface-ground);
             border: 1px solid var(--border-subtle);
@@ -886,7 +908,7 @@
             font-weight: 600;
         }
 
-        /* TRASFORMAZIONE TABELLA COLLABORATORI IN CARD SU SMARTPHONE PER ELIMINARE OVERFLOW ORIZZONTALE */
+        /* TRASFORMAZIONE TABELLA COLLABORATORI IN CARD SU SMARTPHONE */
         @media (max-width: 640px) {
             .responsive-collab-table thead {
                 display: none;
@@ -986,7 +1008,7 @@
                     </div>
                     <h1>Protezione trasparente con la prima Società Benefit del settore.</h1>
                     <p class="prose-measure">
-                        Da oltre <strong class="dynamic-exp-years tabular">18</strong> anni metto la mia esperienza al servizio del territorio. In qualità di Agente Monomandatario per <strong>Bene Assicurazioni</strong>, offro soluzioni all'avanguardia pensate per generare valore reale per persone, famiglie e imprese.
+                        Da oltre <strong class="dynamic-exp-years tabular">19</strong> anni metto la mia esperienza al servizio del territorio. In qualità di Agente Monomandatario per <strong>Bene Assicurazioni</strong>, offro soluzioni all'avanguardia pensate per generare valore reale per persone, famiglie e imprese.
                     </p>
                     <div class="hero-actions">
                         <a href="#contatti" class="btn btn-primary">Richiedi un Preventivo Gratuito</a>
@@ -996,7 +1018,9 @@
                 
                 <aside class="hero-meta-card" aria-label="Riepilogo agenzia">
                     <div class="hero-meta-header">
-                        <div class="hero-avatar" role="img" aria-label="Rocco Conforti"></div>
+                        <div class="hero-icon-badge" aria-hidden="true">
+                            <i class="fa-solid fa-building-shield"></i>
+                        </div>
                         <div>
                             <strong style="display:block; font-size: 0.9375rem;">Rocco Conforti</strong>
                             <span style="font-size: 0.8125rem; color: var(--text-muted);">Agente Monomandatario</span>
@@ -1024,7 +1048,7 @@
             </div>
         </section>
 
-        <!-- SEZIONE SOLUZIONI (BENTO GRID ASIMMETRICA) -->
+        <!-- SEZIONE SOLUZIONI (BENTO GRID CON NOME PRODOTTO CORRETTO: AUTOMOTO&VAN) -->
         <section id="polizze">
             <div class="container">
                 <div class="section-header">
@@ -1033,19 +1057,19 @@
                 </div>
 
                 <div class="bento-grid">
-                    <!-- CARD PRIMARIA: VEICOLI -->
+                    <!-- CARD PRIMARIA: AUTOMOTO&VAN (NOME UFFICIALE DI AGENZIA) -->
                     <a href="veicoli.html" class="bento-card bento-featured">
                         <div class="card-top">
                             <div class="card-icon-box">
                                 <i class="fa-solid fa-car-side" aria-hidden="true"></i>
                             </div>
-                            <h3>Mobilità & Veicoli (Autofit)</h3>
+                            <h3>AutoMoto&Van</h3>
                             <p class="prose-measure">
-                                Protezione completa per autovetture, motoveicoli, van e autocarri aziendali. Copertura RC, Kasko, Cristalli, Eventi Naturali e Assistenza Stradale H24 con gestione telematica e rapida dei sinistri.
+                                La soluzione completa di Bene per tutti i veicoli a motore: autovetture, motocicli, ciclomotori, van, autocarri e natanti. Offre garanzie su misura, soccorso stradale H24, franchigie agevolate nei centri convenzionati e l'esclusiva Garanzia Comfort.
                             </p>
                         </div>
                         <div class="card-footer-action">
-                            <span>Scopri la polizza veicoli e consulta i Set Informativi</span>
+                            <span>Scopri la polizza AutoMoto&Van e consulta i Set Informativi</span>
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </div>
                     </a>
@@ -1098,11 +1122,13 @@
             </div>
         </section>
 
-        <!-- SEZIONE CHI SONO -->
+        <!-- SEZIONE CHI SONO (CON FOTO DELL'AGENZIA) -->
         <section id="chi-sono">
             <div class="container about-grid">
-                <div>
-                    <div class="about-photo" role="img" aria-label="Rocco Conforti"></div>
+                <div class="agency-photo-wrapper">
+                    <div class="about-photo" role="img" aria-label="Sede dell'Agenzia Conforti Assicurazioni">
+                        <span class="about-photo-badge"><i class="fa-solid fa-location-dot" style="margin-right: 4px;"></i> Sede di Noci</span>
+                    </div>
                     <div class="mandate-box">
                         <span class="mandate-title">Rappresentanza Esclusiva</span>
                         <div class="mandate-list">
@@ -1118,7 +1144,7 @@
                     <h3>Rocco Conforti</h3>
                     <span class="about-qualification">Agente Monomandatario iscritto al RUI, Sez. A — Matr. A000099409</span>
                     <p class="prose-measure">
-                        Opero sul territorio pugliese da oltre <strong class="dynamic-exp-years tabular">18</strong> anni con dedizione, trasparenza e una presenza costante al fianco dell'assicurato, specialmente nel momento fondamentale della gestione dei sinistri.
+                        Opero sul territorio pugliese da oltre <strong class="dynamic-exp-years tabular">19</strong> anni con dedizione, trasparenza e una presenza costante al fianco dell'assicurato, specialmente nel momento fondamentale della gestione dei sinistri.
                     </p>
                     <p class="prose-measure">
                         La scelta di operare come monomandatario di <strong>Bene Assicurazioni</strong> mi consente di offrire prodotti chiari, snelli e competitivi, supportati da una moderna infrastruttura digitale e dalla sicurezza del contatto umano garantito dalle mie due agenzie di Noci e Putignano.
@@ -1413,7 +1439,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Calcolo Dinamico Anni di Attività da Iscrizione RUI (11 Maggio 2007)
-            const registrationDate = new Date(2007, 4, 11); // Maggio ha indice mese 4
+            const registrationDate = new Date(2007, 4, 11);
             const today = new Date();
             let yearsDiff = today.getFullYear() - registrationDate.getFullYear();
             const monthDiff = today.getMonth() - registrationDate.getMonth();
